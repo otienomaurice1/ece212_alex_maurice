@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module sevenseg_ext(
+module sevenseg_ext_n(
 input logic  [6:0] d,
 output logic [6:0] segs_n,
 output logic dp_n
@@ -44,7 +44,8 @@ output logic dp_n
   if(d[4]) 
    segs_n = 7'b0111111;
    else  begin
-   case(data)                   // use the data bits to decode values of segs_n
+   case(data)   
+   4'd0: segs_n = 7'b1000000;               // use the data bits to decode values of segs_n
    4'd1: segs_n = 7'b1111001;
    4'd2: segs_n = 7'b0100100;
    4'd3: segs_n = 7'b0110000;
@@ -59,14 +60,13 @@ output logic dp_n
    4'd12: segs_n = 7'b1000110;
    4'd15: segs_n = 7'b0001110;
    default: segs_n = 7'b1111111;
-
+   
    endcase
    end 
    end   
    end
-   endmodule: sevenseg_ext
+   endmodule: sevenseg_ext_n
     
    
        
   
-
