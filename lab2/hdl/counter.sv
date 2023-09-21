@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 09/14/2023 04:26:06 PM
+// Create Date: 09/13/2023 10:44:43 PM
 // Design Name: 
-// Module Name: time_ctr
+// Module Name: counter
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
@@ -19,12 +19,15 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
-module time_ctr(
-input logic rst, clk ,adv_min, adv_hr,
-output logic [3:0] s0,s1, m0, m1,h1,h0,am_pm
+
+module counter #(parameter W = 8) (
+input logic clk, rst, enb, 
+output logic [W-1:0] q
+
     );
- 
-  logic cy;
-    hr U_HR(.clk,.rst,.h1,.h0,.cy3(cy),.adv_hr,.am_pm);
-    min_sec U_MINSEC(.rst, .clk,.s0,.s1,.m0,.m1,.cy3(cy),.adv_hr,.adv_min);
+    
+    always_ff @(posedge clk)
+    if(rst)q <= '0;
+    else if (enb) q <= q+1;
+  
 endmodule

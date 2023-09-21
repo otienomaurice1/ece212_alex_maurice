@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 09/14/2023 04:26:06 PM
+// Create Date: 09/02/2023 01:49:53 PM
 // Design Name: 
-// Module Name: time_ctr
+// Module Name: sevenseg_ext_top
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
@@ -19,12 +19,14 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
-module time_ctr(
-input logic rst, clk ,adv_min, adv_hr,
-output logic [3:0] s0,s1, m0, m1,h1,h0,am_pm
+
+module sevenseg_ext_n(
+input logic [6:0] data,
+output logic dp_n,
+output logic [7:0] an_n,
+output logic [6:0]segs_n
+
     );
- 
-  logic cy;
-    hr U_HR(.clk,.rst,.h1,.h0,.cy3(cy),.adv_hr,.am_pm);
-    min_sec U_MINSEC(.rst, .clk,.s0,.s1,.m0,.m1,.cy3(cy),.adv_hr,.adv_min);
+    assign an_n = 8'b11111110;
+    sevenseg_ext U_EXTENDED(.d(data), .dp_n,.segs_n);
 endmodule

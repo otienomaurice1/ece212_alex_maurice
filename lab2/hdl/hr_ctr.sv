@@ -37,5 +37,10 @@ output logic [3:0] h1,h0
     h1 <= 0;
     h0 <= 1;
     end
+    
+    else if (h1 == 4'd0 && h0 == 4'd9) begin
+    h1 <= 1;
+    h0 <= 0;
+    end
     end
 endmodule: hr_ctr
