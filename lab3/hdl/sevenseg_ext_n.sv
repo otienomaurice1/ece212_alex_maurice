@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 09/21/2023 03:50:39 PM
+// Create Date: 09/02/2023 01:49:53 PM
 // Design Name: 
-// Module Name: conv_sgnmag
+// Module Name: sevenseg_ext_top
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
@@ -18,21 +18,15 @@
 // Additional Comments:
 // 
 //////////////////////////////////////////////////////////////////////////////////
-module  conv_sgnmag(
-   input logic [17:0] tx10,
-  
-   output logic tx10_sign,
-   output logic [16:0] tx10_mag);
-always_comb begin
-    if(tx10[17]) begin
-   tx10_sign = 1'b1;
-   tx10_mag = ~(tx10)+1 ; 
- end
-   else begin
-    tx10_sign = 1'b0;
-    tx10_mag = tx10[16:0]; 
-  end
- end
+
+
+module sevenseg_ext_n(
+input logic [6:0] data,
+output logic dp_n,
+output logic [7:0] an_n,
+output logic [6:0]segs_n
+
+    );
+    assign an_n = 8'b11111110;
+    sevenseg_ext U_EXTENDED(.d(data), .dp_n,.segs_n);
 endmodule
-
-

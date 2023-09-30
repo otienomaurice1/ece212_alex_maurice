@@ -20,12 +20,12 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 module  tconvert(
-   input logic [12:0] tc,
+   input logic signed [12:0] tc,
    input logic cf,
    output logic [17:0] tx10);
  logic [17:0] tc_32;
 always_comb begin
-  tc_32 = tc << 4 + tc<<3 +tc<<1 +320; // multiply by 18 and add 320
+  tc_32 = tc << 4 + tc<<2 +320; // multiply by 18 and add 320
            if(cf) 
            tx10 = tc_32 << 3 + tc_32 <<1;  // multiply by 10
             else 

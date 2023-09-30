@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 09/21/2023 03:50:39 PM
+// Create Date: 09/13/2023 10:44:43 PM
 // Design Name: 
-// Module Name: conv_sgnmag
+// Module Name: counter
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
@@ -18,21 +18,16 @@
 // Additional Comments:
 // 
 //////////////////////////////////////////////////////////////////////////////////
-module  conv_sgnmag(
-   input logic [17:0] tx10,
+
+
+module counter #(parameter W = 8) (
+input logic clk, rst, enb, 
+output logic [W-1:0] q
+
+    );
+    
+    always_ff @(posedge clk)
+    if(rst)q <= '0;
+    else if (enb) q <= q+1;
   
-   output logic tx10_sign,
-   output logic [16:0] tx10_mag);
-always_comb begin
-    if(tx10[17]) begin
-   tx10_sign = 1'b1;
-   tx10_mag = ~(tx10)+1 ; 
- end
-   else begin
-    tx10_sign = 1'b0;
-    tx10_mag = tx10[16:0]; 
-  end
- end
 endmodule
-
-
