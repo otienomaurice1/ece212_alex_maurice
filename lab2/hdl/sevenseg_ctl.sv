@@ -37,6 +37,6 @@ module sevenseg_ctl(
 
     mux8 #(.W(7)) U_MUX8 (.sel(digit), .d0, .d1, .d2, .d3, .d4, .d5, .d6, .d7, .y(muxd));
 
-    sevenseg_ext_n U_SSEG (.d(muxd), .segs_n, .dp_n);
+    sevenseg_ext U_SSEG (.d(muxd), .segs_n, .dp_n);
 
 endmodule
