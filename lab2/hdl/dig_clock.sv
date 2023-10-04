@@ -10,7 +10,7 @@
 // Target Devices: 
 // Tool Versions: 
 // Description: Combines the digital clock with the seven segment controller for display
-//               interfaces with the fpga
+//              interfaces with the fpga
 // 
 // Dependencies: 
 // Revision:
