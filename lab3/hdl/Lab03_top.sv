@@ -69,7 +69,7 @@ module lab03_top(
     // Switch Fahrenheit and Celcius (MUX) 7-bits
     always_comb begin
     if (switch_C_F )
-        cf_u = 7'b0001110; // F
+        cf_u = 7'b0001111; // F
     else
         cf_u = 7'b0000110; // C
 
