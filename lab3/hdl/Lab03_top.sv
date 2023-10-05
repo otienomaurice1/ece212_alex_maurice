@@ -71,9 +71,9 @@ module lab03_top(
     if (switch_C_F )
         cf_u = 7'b0001110; // F
     else
-        cf_u = 7'b1000110; // C
+        cf_u = 7'b0000110; // C
 
-    unique if (sign_bit_in )
+     if (sign_bit_in )
         sign_bit_out = 7'b0010000; // Neg. sign 
     else
         sign_bit_out = 7'b1000000; //Empty
