@@ -1,0 +1,293 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Mon Oct 16 01:18:45 2023
+# Process ID: 30348
+# Current directory: C:/Users/otienom/Lab02/Lab02.runs/synth_1
+# Command line: vivado.exe -log dig_clock_top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source dig_clock_top.tcl
+# Log file: C:/Users/otienom/Lab02/Lab02.runs/synth_1/dig_clock_top.vds
+# Journal file: C:/Users/otienom/Lab02/Lab02.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source dig_clock_top.tcl -notrace
+Command: synth_design -top dig_clock_top -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 24124
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:03 . Memory (MB): peak = 1140.867 ; gain = 32.922
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'dig_clock_top' [C:/Users/otienom/Lab02/Lab02.srcs/sources_1/new/clock.sv:22]
+INFO: [Synth 8-6157] synthesizing module 'dig_clock' [C:/Users/otienom/Lab02/dig_clock.sv:28]
+INFO: [Synth 8-6157] synthesizing module 'time_ctr' [C:/Users/otienom/Lab02/Lab02.srcs/sources_1/new/time_ctr.sv:17]
+INFO: [Synth 8-6157] synthesizing module 'hr' [C:/Users/otienom/Lab02/Lab02.srcs/sources_1/new/hr.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'period_enb' [C:/Users/otienom/Lab02/Lab02.srcs/sources_1/new/period_enb.sv:1]
+	Parameter PERIOD_MS bound to: 1000 - type: integer 
+	Parameter PERIOD_US bound to: 10000 - type: integer 
+	Parameter PERIOD_NS bound to: 100000 - type: integer 
+	Parameter CLKFREQ_MHZ bound to: 100 - type: integer 
+	Parameter CLKPD_NS bound to: 10 - type: integer 
+	Parameter PERIOD_COUNT_LIMIT bound to: 10000 - type: integer 
+	Parameter PERIOD_COUNT_BITS bound to: 14 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'period_enb' (1#1) [C:/Users/otienom/Lab02/Lab02.srcs/sources_1/new/period_enb.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'counter_rc_mod' [C:/Users/otienom/Lab02/Lab02.srcs/sources_1/new/counter_rc_mod.sv:11]
+	Parameter MOD bound to: 12 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'counter_rc_mod' (2#1) [C:/Users/otienom/Lab02/Lab02.srcs/sources_1/new/counter_rc_mod.sv:11]
+INFO: [Synth 8-6157] synthesizing module 'dbl_dabble' [C:/Users/otienom/Lab02/Lab02.srcs/sources_1/new/dbl_dabble.sv:15]
+INFO: [Synth 8-251] dbl_dabble input: x [C:/Users/otienom/Lab02/Lab02.srcs/sources_1/new/dbl_dabble.sv:24]
+INFO: [Synth 8-251] shift 1 4'bxxxx 4'bxxxx 4'bxxxx 8'bxxxxxxxx [C:/Users/otienom/Lab02/Lab02.srcs/sources_1/new/dbl_dabble.sv:39]
+INFO: [Synth 8-251] shift 2 4'bxxxx 4'bxxxx 4'bxxxx 8'bxxxxxxxx [C:/Users/otienom/Lab02/Lab02.srcs/sources_1/new/dbl_dabble.sv:39]
+INFO: [Synth 8-251] shift 3 4'bxxxx 4'bxxxx 4'bxxxx 8'bxxxxxxxx [C:/Users/otienom/Lab02/Lab02.srcs/sources_1/new/dbl_dabble.sv:39]
+INFO: [Synth 8-251] add3o 4 4'bxxxx 4'bxxxx 4'bxxxx 8'bxxxxxxxx [C:/Users/otienom/Lab02/Lab02.srcs/sources_1/new/dbl_dabble.sv:31]
+INFO: [Synth 8-251] shift 4 4'bxxxx 4'bxxxx 4'bxxxx 8'bxxxxxxxx [C:/Users/otienom/Lab02/Lab02.srcs/sources_1/new/dbl_dabble.sv:39]
+INFO: [Synth 8-251] add3o 5 4'bxxxx 4'bxxxx 4'bxxxx 8'bxxxxxxxx [C:/Users/otienom/Lab02/Lab02.srcs/sources_1/new/dbl_dabble.sv:31]
+INFO: [Synth 8-251] shift 5 4'bxxxx 4'bxxxx 4'bxxxx 8'bxxxxxxxx [C:/Users/otienom/Lab02/Lab02.srcs/sources_1/new/dbl_dabble.sv:39]
+INFO: [Synth 8-251] add3o 6 4'bxxxx 4'bxxxx 4'bxxxx 8'bxxxxxxxx [C:/Users/otienom/Lab02/Lab02.srcs/sources_1/new/dbl_dabble.sv:31]
+INFO: [Synth 8-251] shift 6 4'bxxxx 4'bxxxx 4'bxxxx 8'bxxxxxxxx [C:/Users/otienom/Lab02/Lab02.srcs/sources_1/new/dbl_dabble.sv:39]
+INFO: [Synth 8-251] add3o 7 4'bxxxx 4'bxxxx 4'bxxxx 8'bxxxxxxxx [C:/Users/otienom/Lab02/Lab02.srcs/sources_1/new/dbl_dabble.sv:31]
+INFO: [Synth 8-251] add3t 7 4'bxxxx 4'bxxxx 4'bxxxx 8'bxxxxxxxx [C:/Users/otienom/Lab02/Lab02.srcs/sources_1/new/dbl_dabble.sv:35]
+INFO: [Synth 8-251] shift 7 4'bxxxx 4'bxxxx 4'bxxxx 8'bxxxxxxxx [C:/Users/otienom/Lab02/Lab02.srcs/sources_1/new/dbl_dabble.sv:39]
+INFO: [Synth 8-251] add3o 8 4'bxxxx 4'bxxxx 4'bxxxx 8'bxxxxxxxx [C:/Users/otienom/Lab02/Lab02.srcs/sources_1/new/dbl_dabble.sv:31]
+INFO: [Synth 8-251] add3t 8 4'bxxxx 4'bxxxx 4'bxxxx 8'bxxxxxxxx [C:/Users/otienom/Lab02/Lab02.srcs/sources_1/new/dbl_dabble.sv:35]
+INFO: [Synth 8-251] shift 8 4'bxxxx 4'bxxxx 4'bxxxx 8'bxxxxxxxx [C:/Users/otienom/Lab02/Lab02.srcs/sources_1/new/dbl_dabble.sv:39]
+INFO: [Synth 8-251] result    x   x   x [C:/Users/otienom/Lab02/Lab02.srcs/sources_1/new/dbl_dabble.sv:41]
+INFO: [Synth 8-6155] done synthesizing module 'dbl_dabble' (3#1) [C:/Users/otienom/Lab02/Lab02.srcs/sources_1/new/dbl_dabble.sv:15]
+INFO: [Synth 8-6155] done synthesizing module 'hr' (4#1) [C:/Users/otienom/Lab02/Lab02.srcs/sources_1/new/hr.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'min_sec' [C:/Users/otienom/Lab02/Lab02.srcs/sources_1/new/min_sec.sv:37]
+INFO: [Synth 8-6157] synthesizing module 'period_enb__parameterized0' [C:/Users/otienom/Lab02/Lab02.srcs/sources_1/new/period_enb.sv:1]
+	Parameter PERIOD_MS bound to: 1 - type: integer 
+	Parameter PERIOD_US bound to: 10 - type: integer 
+	Parameter PERIOD_NS bound to: 100 - type: integer 
+	Parameter CLKFREQ_MHZ bound to: 100 - type: integer 
+	Parameter CLKPD_NS bound to: 10 - type: integer 
+	Parameter PERIOD_COUNT_LIMIT bound to: 10 - type: integer 
+	Parameter PERIOD_COUNT_BITS bound to: 4 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'period_enb__parameterized0' (4#1) [C:/Users/otienom/Lab02/Lab02.srcs/sources_1/new/period_enb.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'counter_rc_mod__parameterized0' [C:/Users/otienom/Lab02/Lab02.srcs/sources_1/new/counter_rc_mod.sv:11]
+	Parameter MOD bound to: 10 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'counter_rc_mod__parameterized0' (4#1) [C:/Users/otienom/Lab02/Lab02.srcs/sources_1/new/counter_rc_mod.sv:11]
+INFO: [Synth 8-6157] synthesizing module 'counter_rc_mod__parameterized1' [C:/Users/otienom/Lab02/Lab02.srcs/sources_1/new/counter_rc_mod.sv:11]
+	Parameter MOD bound to: 6 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'counter_rc_mod__parameterized1' (4#1) [C:/Users/otienom/Lab02/Lab02.srcs/sources_1/new/counter_rc_mod.sv:11]
+INFO: [Synth 8-6155] done synthesizing module 'min_sec' (5#1) [C:/Users/otienom/Lab02/Lab02.srcs/sources_1/new/min_sec.sv:37]
+INFO: [Synth 8-6155] done synthesizing module 'time_ctr' (6#1) [C:/Users/otienom/Lab02/Lab02.srcs/sources_1/new/time_ctr.sv:17]
+INFO: [Synth 8-6155] done synthesizing module 'dig_clock' (7#1) [C:/Users/otienom/Lab02/dig_clock.sv:28]
+INFO: [Synth 8-6157] synthesizing module 'sevenseg_ctl' [C:/Users/otienom/Lab02/Lab02.srcs/sources_1/new/sevenseg_ctl.sv:18]
+INFO: [Synth 8-6157] synthesizing module 'counter' [C:/Users/otienom/Lab02/Lab02.srcs/sources_1/new/counter.sv:23]
+	Parameter W bound to: 3 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'counter' (8#1) [C:/Users/otienom/Lab02/Lab02.srcs/sources_1/new/counter.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'dec_3_8_n' [C:/Users/otienom/Lab02/Lab02.srcs/sources_1/new/dec_3_8.sv:11]
+INFO: [Synth 8-226] default block is never used [C:/Users/otienom/Lab02/Lab02.srcs/sources_1/new/dec_3_8.sv:19]
+INFO: [Synth 8-6155] done synthesizing module 'dec_3_8_n' (9#1) [C:/Users/otienom/Lab02/Lab02.srcs/sources_1/new/dec_3_8.sv:11]
+INFO: [Synth 8-6157] synthesizing module 'mux8' [C:/Users/otienom/Lab02/Lab02.srcs/sources_1/new/mux8.sv:11]
+	Parameter W bound to: 7 - type: integer 
+INFO: [Synth 8-226] default block is never used [C:/Users/otienom/Lab02/Lab02.srcs/sources_1/new/mux8.sv:18]
+INFO: [Synth 8-6155] done synthesizing module 'mux8' (10#1) [C:/Users/otienom/Lab02/Lab02.srcs/sources_1/new/mux8.sv:11]
+INFO: [Synth 8-6157] synthesizing module 'sevenseg_ext' [C:/Users/otienom/Lab02/Lab02.srcs/sources_1/new/sevenseg_ext.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'sevenseg_ext' (11#1) [C:/Users/otienom/Lab02/Lab02.srcs/sources_1/new/sevenseg_ext.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'sevenseg_ctl' (12#1) [C:/Users/otienom/Lab02/Lab02.srcs/sources_1/new/sevenseg_ctl.sv:18]
+INFO: [Synth 8-6155] done synthesizing module 'dig_clock_top' (13#1) [C:/Users/otienom/Lab02/Lab02.srcs/sources_1/new/clock.sv:22]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:03 . Memory (MB): peak = 1194.250 ; gain = 86.305
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:01 ; elapsed = 00:00:04 . Memory (MB): peak = 1194.250 ; gain = 86.305
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:01 ; elapsed = 00:00:04 . Memory (MB): peak = 1194.250 ; gain = 86.305
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1194.250 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/otienom/Lab02/Lab02.srcs/constrs_1/new/sevenseg_ctl_const.xdc]
+Finished Parsing XDC File [C:/Users/otienom/Lab02/Lab02.srcs/constrs_1/new/sevenseg_ctl_const.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/otienom/Lab02/Lab02.srcs/constrs_1/new/sevenseg_ctl_const.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/dig_clock_top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/dig_clock_top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1315.934 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1315.934 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:02 ; elapsed = 00:00:08 . Memory (MB): peak = 1315.934 ; gain = 207.988
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:02 ; elapsed = 00:00:08 . Memory (MB): peak = 1315.934 ; gain = 207.988
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:02 ; elapsed = 00:00:08 . Memory (MB): peak = 1315.934 ; gain = 207.988
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:08 . Memory (MB): peak = 1315.934 ; gain = 207.988
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input    4 Bit       Adders := 14    
+	   2 Input    3 Bit       Adders := 1     
++---Registers : 
+	                4 Bit    Registers := 8     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   8 Input    8 Bit        Muxes := 1     
+	   2 Input    7 Bit        Muxes := 1     
+	  17 Input    7 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 7     
+	   4 Input    4 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 2     
+	   3 Input    1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:03 ; elapsed = 00:00:09 . Memory (MB): peak = 1315.934 ; gain = 207.988
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:04 ; elapsed = 00:00:13 . Memory (MB): peak = 1315.934 ; gain = 207.988
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:04 ; elapsed = 00:00:13 . Memory (MB): peak = 1320.551 ; gain = 212.605
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:04 ; elapsed = 00:00:13 . Memory (MB): peak = 1321.176 ; gain = 213.230
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:05 ; elapsed = 00:00:15 . Memory (MB): peak = 1327.961 ; gain = 220.016
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:05 ; elapsed = 00:00:15 . Memory (MB): peak = 1327.961 ; gain = 220.016
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:05 ; elapsed = 00:00:15 . Memory (MB): peak = 1327.961 ; gain = 220.016
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:05 ; elapsed = 00:00:15 . Memory (MB): peak = 1327.961 ; gain = 220.016
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:15 . Memory (MB): peak = 1327.961 ; gain = 220.016
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:05 ; elapsed = 00:00:15 . Memory (MB): peak = 1327.961 ; gain = 220.016
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |     4|
+|3     |LUT1   |     9|
+|4     |LUT2   |    14|
+|5     |LUT3   |    16|
+|6     |LUT4   |    24|
+|7     |LUT5   |    11|
+|8     |LUT6   |    26|
+|9     |FDRE   |    48|
+|10    |FDSE   |     2|
+|11    |IBUF   |     4|
+|12    |OBUF   |    16|
++------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:05 ; elapsed = 00:00:15 . Memory (MB): peak = 1327.961 ; gain = 220.016
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:03 ; elapsed = 00:00:14 . Memory (MB): peak = 1327.961 ; gain = 98.332
+Synthesis Optimization Complete : Time (s): cpu = 00:00:05 ; elapsed = 00:00:15 . Memory (MB): peak = 1327.961 ; gain = 220.016
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1340.008 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 4 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1340.008 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+66 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:06 ; elapsed = 00:00:20 . Memory (MB): peak = 1340.008 ; gain = 232.062
+INFO: [Common 17-1381] The checkpoint 'C:/Users/otienom/Lab02/Lab02.runs/synth_1/dig_clock_top.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file dig_clock_top_utilization_synth.rpt -pb dig_clock_top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Mon Oct 16 01:19:10 2023...
