@@ -1,0 +1,31 @@
+#Otieno Maurice
+#26/10/2026
+
+encode_string:    #function label
+
+lbu $t0, 0($a0)   #load s
+lw $t1, 0($a1)   #load k
+addi $t2, $0,0   #declare c
+loop:
+beq $t0,$0,exit #while *s != '\0'
+addi $0,$0,$0  #branch delay 
+addi $t2,$t0,0  # c = s
+addi $sp, $sp,-12 #make room on stack for three registers
+sw $a0,0($sp)   #store a0
+sw $a1,4($sp)   #store a1
+sw &ra,8($sp)   #store return address
+jal encode_char
+add $0,$0,$0
+lw  $ra, 8($sp) #load back return address
+lw  $a1, 4($sp) #load back c
+lw  $a0, 0(sp)  #load back k
+addi $sp,$sp,12 #set the stak pointer back to previous value
+j  loop         #go back to beginning of loop
+addi $0,$0,$0   #delay
+jr $ra          #return to caller
+addi $0,$0,$0   #delay
+
+exit:
+jr   $ra        #return to caller
+addi $0,$0,$0   #delay
+
