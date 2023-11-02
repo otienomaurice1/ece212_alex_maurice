@@ -1,23 +1,33 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
+//---------------------------------------------------------------------------------
+//---------------------------------------------------------------------------------
+// Company: Lafayette college
+// Engineer: Otieno Maurice
 // 
 // Create Date: 09/02/2023 01:50:49 PM
-// Design Name: 
+// Design Name: Seven segment display controller
 // Module Name: sevenseg_ext
 // Project Name: 
-// Target Devices: 
+// Target Devices: NEXYS17 100T FPGA
 // Tool Versions: 
+//----------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------
 // Description: 
-// 
+//------------- This MODULE DESCRIBES THE BEHAVIOUR OF THE SEVEN SEGNMENT CONTROLLER.
+//-------------- When d[0] is asserted the entired display should be blanked--------
+//-------------- When d[5] is asserted and d[6] is not, display the decimal point---
+//--------------When d[4] is asserted and d[6] is not, display the minus sign-------
+//--------------The contents of d[3:0] should make the display show the value of ---
+//-------------of corrresponding ditit from 00 to 9. Special values 10,11,12 and 15-
+//-------------should correspond to A,C,F  and P respectively-----------------------
 // Dependencies: 
-// 
 // Revision:
 // Revision 0.01 - File Created
 // Additional Comments:
-// 
-//////////////////////////////////////////////////////////////////////////////////
+//---------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------
+
 
 
 module sevenseg_ext(
