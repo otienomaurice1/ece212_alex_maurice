@@ -3,16 +3,16 @@
 # Test MIPS instructions.
 # Prelab - annotate test2.asm to explain what happens
 
-#        Assembly                  Description                                  Address     Machine
-main:   ori  $t0, $0,  0x8000   # initialize $t0=0x00008000                     0x00008000  0x34088000
-       addi $t1, $0,  -32768    # store 0x00008000 in $t1                       0x00008004  0x25208000
-       ori  $t2, $t0, 0x8001    #initialize $t0 = 0x00008001                    0x00008008  0x350A8001
-       beq  $t0, $t1, there     # branch to there 0x00008000 = 0x00008000       0x0000800C  0x0128582A
-       slt  $t3, $t1, $t0       # $t3 = 1 if 0x000008000 <0x00008000            0x0000800F   0x0128582A
-       bne  $t3, $0,  here      # branch to here if &t3                         0x00008010
-       j    there               # jump to label there                           0x00008014
-here:   sub  $t2, $t2, $t0      # subtract                                      0x00000018   0x01485022
-       ori  $t0, $t0, 0xFF      #                                               0x0000001C   0x350800FF
-there: add  $t3, $t3, $t2       #                                               0x0000001F   0x016A5820
-       sub  $t0, $t2, $t0       #                                                            0x01484022
-       sw   $t0, 82($t3)        #
+#        Assembly                  Description                                  Address      Machine
+main:   ori  $t0, $0,  0x8000   # initialize $t0=0x00008000                     0x00000000   0x34088000
+       addi $t1, $0,  -32768    # store 0x00008000 in $t1                       0x00000004   0x25208000
+       ori  $t2, $t0, 0x8001    #initialize $t0 = 0x00008001                    0x00000008   0x350A8001
+       beq  $t0, $t1, there     # branch to there 0x00008000 = 0x00008000       0x0000000C   0x0128582A
+       slt  $t3, $t1, $t0       # $t3 = 1 if 0x000008000 <0x00008000            0x00000010   0x0128582A
+       bne  $t3, $0,  here      # branch to here if &t3                         0x00000014   0x1560001C
+       j    there               # jump to label there                           0x00000018   0x00020024
+here:   sub  $t2, $t2, $t0      # subtract                                      0x0000001C   0x01485022
+       ori  $t0, $t0, 0xFF      #  make $t0 = 0x000000FF                        0x00000020   0x350800FF
+there: add  $t3, $t3, $t2       #increase value of $t3 by $t2                   0x00000024   0x016A5820
+       sub  $t0, $t2, $t0       # subtract value of $                           0x00000028   0x01484022
+       sw   $t0, 82($t3)        # store value of $t0 at 82+$t3                  0x0000002C   0x6A0A0052
