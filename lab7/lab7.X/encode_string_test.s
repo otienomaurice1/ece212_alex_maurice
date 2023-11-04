@@ -1,8 +1,8 @@
 ###########################################################################
-#
+#  Author :Engineer Otieno Maurice
 #    ECE 212 Lab 7 - Fall 2023
 #    encode_string test file
-#
+#    Lafayette College
 ########################################################################### 
 
   .set noreorder
