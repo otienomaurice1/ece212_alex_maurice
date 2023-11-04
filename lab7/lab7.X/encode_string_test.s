@@ -9,12 +9,13 @@
     .global main         # define main as a global label
     .text
 main: 
-    la   $a0, msg        # put string address in argument register $a0
+    la   $a0, msg1        # put string address in argument register $a0
     addi $a1, $zero, 4   # put character shift amount in arg reg $a1
     jal  encode_string   # call the function
     add  $0, $0, $0      # branch delay slot nop
+      
 now_decode:
-    la   $a0, msg        # put string address in argument register $a0
+    la   $a0, msg2        # put string address in argument register $a0
     addi $a1, $zero, -4  # put character shift amount in arg reg $a1
     jal  encode_string   # call the function
     add  $0, $0, $0      # branch delay slot nop
@@ -28,44 +29,7 @@ done:
 #
 ###########################################################################
         
-
-###########################################################################
-#
-#    Add assembly code for encode_string function here
-#
-###########################################################################  
-
-
-
-encode_string:    #function label
-
-loop:
-lbu $t0, 0($a0)   #load s
-beq $t0,$0,exit #while *s != '\0'
-add $0,$0,$0   #branch delay 
-addi $t2,$t0,0  #c = s
-addi $sp, $sp,-8 #make room on stack for three registers
-sw $a0,0($sp)   #store a0
-#sw $a1,4($sp)   #store a1
-sw $ra,4($sp)   #store return address
-add $a0,$t0,0   #pass the character as an argument to encode char
-jal encode_char
-add $0,$0,$0
-lw  $ra, 4($sp) #load back return address
-lw  $a0, 0($sp)  #load back c
-addi $sp,$sp,8 #set the stak pointer back to previous value
-addi  $a0,$a0,1 #point to the next character
-j  loop         #go back to beginning of loop
-add $0,$0,$0   #delay
-j  exit         #return to caller
-add $0,$0,$0   #delay
-
-exit:
-jr   $ra        #return to caller
-add $0,$0,$0   #delay
-
-    
-    encode_char:
+encode_char:
 
     slti $t2,$a0,65   #check if c is less than A.assign 1 to $t2 if true
 addi $t9,$0,90    #load decimal value of Z
@@ -75,6 +39,7 @@ or   $t4,$t2,$t3  # or
 beq $t4,0,condition # check if $t4 == 0. jump to else condition if true
 add $0,$0,$0  
 addi $v0,$a0,0    #return c
+    
 jr $ra            #return to caller
 add $0,$0,$0     #delay
 
@@ -89,14 +54,55 @@ addi $v0,$t0,65   #return offset+A
 jr $ra
 add $0,$0,$0     #delay
 
+
+    
 ###########################################################################
 #
-#   data segment assembler directives to allocate storage for string msg
+#    Add assembly code for encode_string function here
+#
+###########################################################################  
+
+encode_string:    #function label
+
+loop:
+lbu $t0, 0($a0)   #load s
+beq $t0,$0,exit #while *s != '\0'
+add $0,$0,$0   #branch delay 
+addi $t2,$t0,0  #c = s
+addi $sp, $sp,-8 #make room on stack for three registers
+sw $a0,0($sp)   #store a0
+sw $ra,4($sp)   #store return address
+add $a0,$t0,0   #pass the character as an argument to encode char
+jal encode_char
+add $0,$0,$0
+lw  $ra, 4($sp) #load back return address
+lw  $a0, 0($sp)  #load back c
+sb   $v0,0($a0)  #store result in memory
+addi $sp,$sp,8 #set the stak pointer back to previous value
+
+addi  $a0,$a0,1 #point to the next character
+j  loop         #go back to beginning of loop
+add $0,$0,$0   #delay
+j  exit         #return to caller
+add $0,$0,$0   #delay
+
+exit:
+jr   $ra        #return to caller
+add $0,$0,$0   #delay
+
+
+###########################################################################
+#
+#    data segment assembler directives to allocate storage for string msg
 #
 ########################################################################### 
     
-      .data
-msg:
-      .asciz "WELCOME BACK MY FRIENDS 2 THE show THAT NEVER ENDS"
+ .data
+msg1:
+ .asciz "S1"
+msg2:
+ .asciz "WELCOME BACK MY FRIENDS 2 THE show THAT NEVER ENDS?"
 
 
+
+    
