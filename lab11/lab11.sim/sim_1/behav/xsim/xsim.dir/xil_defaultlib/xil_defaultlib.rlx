@@ -1,0 +1,26 @@
+0.7
+2020.2
+Nov 18 2020
+09:47:47
+C:/Users/villalba/MPLABXProjects/ece212_alex_maurice/lab11/lab11.sim/sim_1/behav/xsim/glbl.v,1605673889,verilog,,,,glbl,,uvm,,,,,,
+C:/Users/villalba/MPLABXProjects/ece212_alex_maurice/lab11/sv/adder.sv,1701372079,systemVerilog,,C:/Users/villalba/MPLABXProjects/ece212_alex_maurice/lab11/sv/alu.sv,,adder,,uvm,,,,,,
+C:/Users/villalba/MPLABXProjects/ece212_alex_maurice/lab11/sv/alu.sv,1701372079,systemVerilog,,C:/Users/villalba/MPLABXProjects/ece212_alex_maurice/lab11/sv/mips_decls_p.sv,,alu,,uvm,,,,,,
+C:/Users/villalba/MPLABXProjects/ece212_alex_maurice/lab11/sv/aludec.sv,1701372079,systemVerilog,,C:/Users/villalba/MPLABXProjects/ece212_alex_maurice/lab11/sv/controller.sv,,aludec,,uvm,,,,,,
+C:/Users/villalba/MPLABXProjects/ece212_alex_maurice/lab11/sv/controller.sv,1701983592,systemVerilog,,C:/Users/villalba/MPLABXProjects/ece212_alex_maurice/lab11/sv/datapath.sv,,controller,,uvm,,,,,,
+C:/Users/villalba/MPLABXProjects/ece212_alex_maurice/lab11/sv/datapath.sv,1701986999,systemVerilog,,C:/Users/villalba/MPLABXProjects/ece212_alex_maurice/lab11/sv/dmem.sv,,datapath,,uvm,,,,,,
+C:/Users/villalba/MPLABXProjects/ece212_alex_maurice/lab11/sv/dmem.sv,1701375898,systemVerilog,,C:/Users/villalba/MPLABXProjects/ece212_alex_maurice/lab11/sv/imem.sv,,dmem,,uvm,,,,,,
+C:/Users/villalba/MPLABXProjects/ece212_alex_maurice/lab11/sv/imem.sv,1701981271,systemVerilog,,C:/Users/villalba/MPLABXProjects/ece212_alex_maurice/lab11/sv/maindec.sv,,imem,,uvm,,,,,,
+C:/Users/villalba/MPLABXProjects/ece212_alex_maurice/lab11/sv/maindec.sv,1701372079,systemVerilog,,C:/Users/villalba/MPLABXProjects/ece212_alex_maurice/lab11/sv/mips.sv,,maindec,,uvm,,,,,,
+C:/Users/villalba/MPLABXProjects/ece212_alex_maurice/lab11/sv/mips.sv,1701372079,systemVerilog,,C:/Users/villalba/MPLABXProjects/ece212_alex_maurice/lab11/sv/mux2.sv,,mips,,uvm,,,,,,
+C:/Users/villalba/MPLABXProjects/ece212_alex_maurice/lab11/sv/mips_decls_p.sv,1701977737,systemVerilog,C:/Users/villalba/MPLABXProjects/ece212_alex_maurice/lab11/sv/aludec.sv;C:/Users/villalba/MPLABXProjects/ece212_alex_maurice/lab11/sv/controller.sv;C:/Users/villalba/MPLABXProjects/ece212_alex_maurice/lab11/sv/maindec.sv;C:/Users/villalba/MPLABXProjects/ece212_alex_maurice/lab11/sv/mips.sv,C:/Users/villalba/MPLABXProjects/ece212_alex_maurice/lab11/sv/aludec.sv,,mips_decls_p,,uvm,,,,,,
+C:/Users/villalba/MPLABXProjects/ece212_alex_maurice/lab11/sv/mux2.sv,1701372079,systemVerilog,,C:/Users/villalba/MPLABXProjects/ece212_alex_maurice/lab11/sv/pr_d_e.sv,,mux2,,uvm,,,,,,
+C:/Users/villalba/MPLABXProjects/ece212_alex_maurice/lab11/sv/pr_d_e.sv,1701372079,systemVerilog,,C:/Users/villalba/MPLABXProjects/ece212_alex_maurice/lab11/sv/pr_e_m.sv,,pr_d_e,,uvm,,,,,,
+C:/Users/villalba/MPLABXProjects/ece212_alex_maurice/lab11/sv/pr_e_m.sv,1701372079,systemVerilog,,C:/Users/villalba/MPLABXProjects/ece212_alex_maurice/lab11/sv/pr_f_d.sv,,pr_e_m,,uvm,,,,,,
+C:/Users/villalba/MPLABXProjects/ece212_alex_maurice/lab11/sv/pr_f_d.sv,1701372079,systemVerilog,,C:/Users/villalba/MPLABXProjects/ece212_alex_maurice/lab11/sv/pr_m_w.sv,,pr_f_d,,uvm,,,,,,
+C:/Users/villalba/MPLABXProjects/ece212_alex_maurice/lab11/sv/pr_m_w.sv,1701372079,systemVerilog,,C:/Users/villalba/MPLABXProjects/ece212_alex_maurice/lab11/sv/pr_pc.sv,,pr_m_w,,uvm,,,,,,
+C:/Users/villalba/MPLABXProjects/ece212_alex_maurice/lab11/sv/pr_pc.sv,1701372079,systemVerilog,,C:/Users/villalba/MPLABXProjects/ece212_alex_maurice/lab11/sv/regfile.sv,,pr_pc,,uvm,,,,,,
+C:/Users/villalba/MPLABXProjects/ece212_alex_maurice/lab11/sv/regfile.sv,1701372079,systemVerilog,,C:/Users/villalba/MPLABXProjects/ece212_alex_maurice/lab11/sv/signext.sv,,regfile,,uvm,,,,,,
+C:/Users/villalba/MPLABXProjects/ece212_alex_maurice/lab11/sv/signext.sv,1701372079,systemVerilog,,C:/Users/villalba/MPLABXProjects/ece212_alex_maurice/lab11/sv/sl2.sv,,signext,,uvm,,,,,,
+C:/Users/villalba/MPLABXProjects/ece212_alex_maurice/lab11/sv/sl2.sv,1701372079,systemVerilog,,C:/Users/villalba/MPLABXProjects/ece212_alex_maurice/lab11/sv/top.sv,,sl2,,uvm,,,,,,
+C:/Users/villalba/MPLABXProjects/ece212_alex_maurice/lab11/sv/testbench.sv,1701372079,systemVerilog,,,,testbench,,uvm,,,,,,
+C:/Users/villalba/MPLABXProjects/ece212_alex_maurice/lab11/sv/top.sv,1701372079,systemVerilog,,C:/Users/villalba/MPLABXProjects/ece212_alex_maurice/lab11/sv/testbench.sv,,top,,uvm,,,,,,

@@ -1,0 +1,4 @@
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+$stop called at time : 430 ns : File "C:/Users/villalba/MPLABXProjects/ece212_alex_maurice/lab11/sv/testbench.sv" Line 59
+$stop called at time : 430 ns : File "C:/Users/villalba/MPLABXProjects/ece212_alex_maurice/lab11/sv/testbench.sv" Line 59

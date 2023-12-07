@@ -12,6 +12,7 @@ package mips_decls_p;
                              OP_RTYPE   = 6'd0,
                              OP_BLTGEZ  = 6'd1,
                              OP_J       = 6'd2,
+                           //  OP_JR      = 6'd0,
                              OP_JAL     = 6'd3,
                              OP_BEQ     = 6'd4,
                              OP_BNE     = 6'd5,

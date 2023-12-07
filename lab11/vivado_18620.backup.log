@@ -1,0 +1,179 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Fri Dec  1 11:53:48 2023
+# Process ID: 18620
+# Current directory: C:/Users/villalba/MPLABXProjects/ece212_alex_maurice/lab11
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent26356 C:\Users\villalba\MPLABXProjects\ece212_alex_maurice\lab11\lab11.xpr
+# Log file: C:/Users/villalba/MPLABXProjects/ece212_alex_maurice/lab11/vivado.log
+# Journal file: C:/Users/villalba/MPLABXProjects/ece212_alex_maurice/lab11\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/villalba/MPLABXProjects/ece212_alex_maurice/lab11/lab11.xpr
+WARNING: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'C:/Users/villalba/MPLABXProjects/ece212_alex_maurice/lab11/lab11.gen/sources_1'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2020.2/data/ip'.
+open_project: Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 1088.340 ; gain = 0.000
+update_compile_order -fileset sources_1
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+Command: synth_design -rtl -rtl_skip_mlo -name rtl_1
+Starting synth_design
+Using part: xc7vx485tffg1157-1
+Top: top
+INFO: [Device 21-403] Loading part xc7vx485tffg1157-1
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 1719.297 ; gain = 247.875
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'top' [C:/Users/villalba/MPLABXProjects/ece212_alex_maurice/lab11/sv/top.sv:11]
+INFO: [Synth 8-6157] synthesizing module 'mips' [C:/Users/villalba/MPLABXProjects/ece212_alex_maurice/lab11/sv/mips.sv:12]
+INFO: [Synth 8-6157] synthesizing module 'controller' [C:/Users/villalba/MPLABXProjects/ece212_alex_maurice/lab11/sv/controller.sv:17]
+INFO: [Synth 8-6157] synthesizing module 'maindec' [C:/Users/villalba/MPLABXProjects/ece212_alex_maurice/lab11/sv/maindec.sv:15]
+INFO: [Synth 8-6155] done synthesizing module 'maindec' (1#1) [C:/Users/villalba/MPLABXProjects/ece212_alex_maurice/lab11/sv/maindec.sv:15]
+INFO: [Synth 8-6157] synthesizing module 'aludec' [C:/Users/villalba/MPLABXProjects/ece212_alex_maurice/lab11/sv/aludec.sv:12]
+INFO: [Synth 8-6155] done synthesizing module 'aludec' (2#1) [C:/Users/villalba/MPLABXProjects/ece212_alex_maurice/lab11/sv/aludec.sv:12]
+WARNING: [Synth 8-6104] Input port 'funct' has an internal driver [C:/Users/villalba/MPLABXProjects/ece212_alex_maurice/lab11/sv/controller.sv:34]
+INFO: [Synth 8-6155] done synthesizing module 'controller' (3#1) [C:/Users/villalba/MPLABXProjects/ece212_alex_maurice/lab11/sv/controller.sv:17]
+INFO: [Synth 8-6157] synthesizing module 'datapath' [C:/Users/villalba/MPLABXProjects/ece212_alex_maurice/lab11/sv/datapath.sv:12]
+INFO: [Synth 8-6157] synthesizing module 'pr_pc' [C:/Users/villalba/MPLABXProjects/ece212_alex_maurice/lab11/sv/pr_pc.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'pr_pc' (4#1) [C:/Users/villalba/MPLABXProjects/ece212_alex_maurice/lab11/sv/pr_pc.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'adder' [C:/Users/villalba/MPLABXProjects/ece212_alex_maurice/lab11/sv/adder.sv:9]
+INFO: [Synth 8-6155] done synthesizing module 'adder' (5#1) [C:/Users/villalba/MPLABXProjects/ece212_alex_maurice/lab11/sv/adder.sv:9]
+INFO: [Synth 8-6157] synthesizing module 'mux2' [C:/Users/villalba/MPLABXProjects/ece212_alex_maurice/lab11/sv/mux2.sv:9]
+	Parameter WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'mux2' (6#1) [C:/Users/villalba/MPLABXProjects/ece212_alex_maurice/lab11/sv/mux2.sv:9]
+INFO: [Synth 8-6157] synthesizing module 'pr_f_d' [C:/Users/villalba/MPLABXProjects/ece212_alex_maurice/lab11/sv/pr_f_d.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'pr_f_d' (7#1) [C:/Users/villalba/MPLABXProjects/ece212_alex_maurice/lab11/sv/pr_f_d.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'regfile' [C:/Users/villalba/MPLABXProjects/ece212_alex_maurice/lab11/sv/regfile.sv:8]
+INFO: [Synth 8-6155] done synthesizing module 'regfile' (8#1) [C:/Users/villalba/MPLABXProjects/ece212_alex_maurice/lab11/sv/regfile.sv:8]
+INFO: [Synth 8-6157] synthesizing module 'signext' [C:/Users/villalba/MPLABXProjects/ece212_alex_maurice/lab11/sv/signext.sv:8]
+INFO: [Synth 8-6155] done synthesizing module 'signext' (9#1) [C:/Users/villalba/MPLABXProjects/ece212_alex_maurice/lab11/sv/signext.sv:8]
+INFO: [Synth 8-6157] synthesizing module 'sl2' [C:/Users/villalba/MPLABXProjects/ece212_alex_maurice/lab11/sv/sl2.sv:9]
+INFO: [Synth 8-6155] done synthesizing module 'sl2' (10#1) [C:/Users/villalba/MPLABXProjects/ece212_alex_maurice/lab11/sv/sl2.sv:9]
+INFO: [Synth 8-6157] synthesizing module 'pr_d_e' [C:/Users/villalba/MPLABXProjects/ece212_alex_maurice/lab11/sv/pr_d_e.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'pr_d_e' (11#1) [C:/Users/villalba/MPLABXProjects/ece212_alex_maurice/lab11/sv/pr_d_e.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'alu' [C:/Users/villalba/MPLABXProjects/ece212_alex_maurice/lab11/sv/alu.sv:8]
+INFO: [Synth 8-6155] done synthesizing module 'alu' (12#1) [C:/Users/villalba/MPLABXProjects/ece212_alex_maurice/lab11/sv/alu.sv:8]
+INFO: [Synth 8-6157] synthesizing module 'mux2__parameterized0' [C:/Users/villalba/MPLABXProjects/ece212_alex_maurice/lab11/sv/mux2.sv:9]
+	Parameter WIDTH bound to: 5 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'mux2__parameterized0' (12#1) [C:/Users/villalba/MPLABXProjects/ece212_alex_maurice/lab11/sv/mux2.sv:9]
+INFO: [Synth 8-6157] synthesizing module 'pr_e_m' [C:/Users/villalba/MPLABXProjects/ece212_alex_maurice/lab11/sv/pr_e_m.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'pr_e_m' (13#1) [C:/Users/villalba/MPLABXProjects/ece212_alex_maurice/lab11/sv/pr_e_m.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'pr_m_w' [C:/Users/villalba/MPLABXProjects/ece212_alex_maurice/lab11/sv/pr_m_w.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'pr_m_w' (14#1) [C:/Users/villalba/MPLABXProjects/ece212_alex_maurice/lab11/sv/pr_m_w.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'datapath' (15#1) [C:/Users/villalba/MPLABXProjects/ece212_alex_maurice/lab11/sv/datapath.sv:12]
+INFO: [Synth 8-6155] done synthesizing module 'mips' (16#1) [C:/Users/villalba/MPLABXProjects/ece212_alex_maurice/lab11/sv/mips.sv:12]
+INFO: [Synth 8-6157] synthesizing module 'imem' [C:/Users/villalba/MPLABXProjects/ece212_alex_maurice/lab11/sv/imem.sv:15]
+	Parameter SIZE bound to: 64 - type: integer 
+INFO: [Synth 8-3876] $readmem data file 'lab11memfile.dat' is read successfully [C:/Users/villalba/MPLABXProjects/ece212_alex_maurice/lab11/sv/imem.sv:28]
+INFO: [Synth 8-6155] done synthesizing module 'imem' (17#1) [C:/Users/villalba/MPLABXProjects/ece212_alex_maurice/lab11/sv/imem.sv:15]
+INFO: [Synth 8-6157] synthesizing module 'dmem' [C:/Users/villalba/MPLABXProjects/ece212_alex_maurice/lab11/sv/dmem.sv:14]
+	Parameter SIZE bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'dmem' (18#1) [C:/Users/villalba/MPLABXProjects/ece212_alex_maurice/lab11/sv/dmem.sv:14]
+INFO: [Synth 8-6155] done synthesizing module 'top' (19#1) [C:/Users/villalba/MPLABXProjects/ece212_alex_maurice/lab11/sv/top.sv:11]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1797.840 ; gain = 326.418
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:04 . Memory (MB): peak = 1797.840 ; gain = 326.418
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:04 . Memory (MB): peak = 1797.840 ; gain = 326.418
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.015 . Memory (MB): peak = 1797.840 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1897.645 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 2067.336 ; gain = 595.914
+44 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:06 ; elapsed = 00:00:17 . Memory (MB): peak = 2067.336 ; gain = 978.996
+file mkdir C:/Users/villalba/MPLABXProjects/ece212_alex_maurice/lab11/lab11.srcs/sources_1/new
+close [ open C:/Users/villalba/MPLABXProjects/ece212_alex_maurice/lab11/lab11.srcs/sources_1/new/mux3.sv w ]
+add_files C:/Users/villalba/MPLABXProjects/ece212_alex_maurice/lab11/lab11.srcs/sources_1/new/mux3.sv
+update_compile_order -fileset sources_1
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:04 . Memory (MB): peak = 2158.230 ; gain = 17.059
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'top' [C:/Users/villalba/MPLABXProjects/ece212_alex_maurice/lab11/sv/top.sv:11]
+INFO: [Synth 8-6157] synthesizing module 'mips' [C:/Users/villalba/MPLABXProjects/ece212_alex_maurice/lab11/sv/mips.sv:12]
+INFO: [Synth 8-6157] synthesizing module 'controller' [C:/Users/villalba/MPLABXProjects/ece212_alex_maurice/lab11/sv/controller.sv:17]
+INFO: [Synth 8-6157] synthesizing module 'maindec' [C:/Users/villalba/MPLABXProjects/ece212_alex_maurice/lab11/sv/maindec.sv:15]
+INFO: [Synth 8-6155] done synthesizing module 'maindec' (1#1) [C:/Users/villalba/MPLABXProjects/ece212_alex_maurice/lab11/sv/maindec.sv:15]
+INFO: [Synth 8-6157] synthesizing module 'aludec' [C:/Users/villalba/MPLABXProjects/ece212_alex_maurice/lab11/sv/aludec.sv:12]
+INFO: [Synth 8-6155] done synthesizing module 'aludec' (2#1) [C:/Users/villalba/MPLABXProjects/ece212_alex_maurice/lab11/sv/aludec.sv:12]
+WARNING: [Synth 8-6104] Input port 'funct' has an internal driver [C:/Users/villalba/MPLABXProjects/ece212_alex_maurice/lab11/sv/controller.sv:34]
+INFO: [Synth 8-6155] done synthesizing module 'controller' (3#1) [C:/Users/villalba/MPLABXProjects/ece212_alex_maurice/lab11/sv/controller.sv:17]
+INFO: [Synth 8-6157] synthesizing module 'datapath' [C:/Users/villalba/MPLABXProjects/ece212_alex_maurice/lab11/sv/datapath.sv:12]
+INFO: [Synth 8-6157] synthesizing module 'pr_pc' [C:/Users/villalba/MPLABXProjects/ece212_alex_maurice/lab11/sv/pr_pc.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'pr_pc' (4#1) [C:/Users/villalba/MPLABXProjects/ece212_alex_maurice/lab11/sv/pr_pc.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'adder' [C:/Users/villalba/MPLABXProjects/ece212_alex_maurice/lab11/sv/adder.sv:9]
+INFO: [Synth 8-6155] done synthesizing module 'adder' (5#1) [C:/Users/villalba/MPLABXProjects/ece212_alex_maurice/lab11/sv/adder.sv:9]
+INFO: [Synth 8-6157] synthesizing module 'mux2' [C:/Users/villalba/MPLABXProjects/ece212_alex_maurice/lab11/sv/mux2.sv:9]
+	Parameter WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'mux2' (6#1) [C:/Users/villalba/MPLABXProjects/ece212_alex_maurice/lab11/sv/mux2.sv:9]
+INFO: [Synth 8-6157] synthesizing module 'pr_f_d' [C:/Users/villalba/MPLABXProjects/ece212_alex_maurice/lab11/sv/pr_f_d.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'pr_f_d' (7#1) [C:/Users/villalba/MPLABXProjects/ece212_alex_maurice/lab11/sv/pr_f_d.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'regfile' [C:/Users/villalba/MPLABXProjects/ece212_alex_maurice/lab11/sv/regfile.sv:8]
+INFO: [Synth 8-6155] done synthesizing module 'regfile' (8#1) [C:/Users/villalba/MPLABXProjects/ece212_alex_maurice/lab11/sv/regfile.sv:8]
+INFO: [Synth 8-6157] synthesizing module 'signext' [C:/Users/villalba/MPLABXProjects/ece212_alex_maurice/lab11/sv/signext.sv:8]
+INFO: [Synth 8-6155] done synthesizing module 'signext' (9#1) [C:/Users/villalba/MPLABXProjects/ece212_alex_maurice/lab11/sv/signext.sv:8]
+INFO: [Synth 8-6157] synthesizing module 'sl2' [C:/Users/villalba/MPLABXProjects/ece212_alex_maurice/lab11/sv/sl2.sv:9]
+INFO: [Synth 8-6155] done synthesizing module 'sl2' (10#1) [C:/Users/villalba/MPLABXProjects/ece212_alex_maurice/lab11/sv/sl2.sv:9]
+INFO: [Synth 8-6157] synthesizing module 'pr_d_e' [C:/Users/villalba/MPLABXProjects/ece212_alex_maurice/lab11/sv/pr_d_e.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'pr_d_e' (11#1) [C:/Users/villalba/MPLABXProjects/ece212_alex_maurice/lab11/sv/pr_d_e.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'alu' [C:/Users/villalba/MPLABXProjects/ece212_alex_maurice/lab11/sv/alu.sv:8]
+INFO: [Synth 8-6155] done synthesizing module 'alu' (12#1) [C:/Users/villalba/MPLABXProjects/ece212_alex_maurice/lab11/sv/alu.sv:8]
+INFO: [Synth 8-6157] synthesizing module 'mux2__parameterized0' [C:/Users/villalba/MPLABXProjects/ece212_alex_maurice/lab11/sv/mux2.sv:9]
+	Parameter WIDTH bound to: 5 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'mux2__parameterized0' (12#1) [C:/Users/villalba/MPLABXProjects/ece212_alex_maurice/lab11/sv/mux2.sv:9]
+INFO: [Synth 8-6157] synthesizing module 'pr_e_m' [C:/Users/villalba/MPLABXProjects/ece212_alex_maurice/lab11/sv/pr_e_m.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'pr_e_m' (13#1) [C:/Users/villalba/MPLABXProjects/ece212_alex_maurice/lab11/sv/pr_e_m.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'pr_m_w' [C:/Users/villalba/MPLABXProjects/ece212_alex_maurice/lab11/sv/pr_m_w.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'pr_m_w' (14#1) [C:/Users/villalba/MPLABXProjects/ece212_alex_maurice/lab11/sv/pr_m_w.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'datapath' (15#1) [C:/Users/villalba/MPLABXProjects/ece212_alex_maurice/lab11/sv/datapath.sv:12]
+INFO: [Synth 8-6155] done synthesizing module 'mips' (16#1) [C:/Users/villalba/MPLABXProjects/ece212_alex_maurice/lab11/sv/mips.sv:12]
+INFO: [Synth 8-6157] synthesizing module 'imem' [C:/Users/villalba/MPLABXProjects/ece212_alex_maurice/lab11/sv/imem.sv:15]
+	Parameter SIZE bound to: 64 - type: integer 
+INFO: [Synth 8-3876] $readmem data file 'lab11memfile.dat' is read successfully [C:/Users/villalba/MPLABXProjects/ece212_alex_maurice/lab11/sv/imem.sv:28]
+INFO: [Synth 8-6155] done synthesizing module 'imem' (17#1) [C:/Users/villalba/MPLABXProjects/ece212_alex_maurice/lab11/sv/imem.sv:15]
+INFO: [Synth 8-6157] synthesizing module 'dmem' [C:/Users/villalba/MPLABXProjects/ece212_alex_maurice/lab11/sv/dmem.sv:14]
+	Parameter SIZE bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'dmem' (18#1) [C:/Users/villalba/MPLABXProjects/ece212_alex_maurice/lab11/sv/dmem.sv:14]
+INFO: [Synth 8-6155] done synthesizing module 'top' (19#1) [C:/Users/villalba/MPLABXProjects/ece212_alex_maurice/lab11/sv/top.sv:11]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:04 . Memory (MB): peak = 2196.223 ; gain = 55.051
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:01 ; elapsed = 00:00:04 . Memory (MB): peak = 2220.121 ; gain = 78.949
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:01 ; elapsed = 00:00:04 . Memory (MB): peak = 2220.121 ; gain = 78.949
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 2231.824 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+refresh_design: Time (s): cpu = 00:00:03 ; elapsed = 00:00:09 . Memory (MB): peak = 2231.824 ; gain = 90.652
+exit
+INFO: [Common 17-206] Exiting Vivado at Fri Dec  1 13:41:09 2023...

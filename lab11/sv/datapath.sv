@@ -11,8 +11,10 @@
 
 module datapath(input  logic        clk, reset,
   input logic         memtoreg_d, memwrite_d, pcsrc_d, alusrc_d,
-  input logic         regdst_d, regwrite_d, jump_d,
+  // Added jr_d signal as a selector for the mux2
+  input logic         regdst_d, regwrite_d, jump_d, jumpr_d, jal_d,
   input logic [2:0]   alucontrol_d,
+
   output logic        zero_d,
   output logic [31:0] pc_f,
   input logic [31:0]  instr_f,
@@ -27,8 +29,8 @@ module datapath(input  logic        clk, reset,
   //   Signal Declarations
   //--------------------------------------------------------------
   //   IF Declarations
-
-  logic [31:0]                     pcplus4_f, pcnextbr_f, pcnext_f;
+    // Added pcnext as a wire to and from the mux2
+  logic [31:0]                     pcnext_j_jr, pcplus4_f, pcnextbr_f, pcnext_f;
   // instr_f already declared as an input port
 
   //   ID Declarataions (not control signals are module inputs)
@@ -47,6 +49,7 @@ module datapath(input  logic        clk, reset,
 
   logic         memtoreg_e, memwrite_e, alusrc_e;
   logic         regdst_e, regwrite_e;
+  logic         jal_e;
   logic [2:0]   alucontrol_e;
 
   logic [4:0]                      rs_e;
@@ -57,6 +60,7 @@ module datapath(input  logic        clk, reset,
   logic [31:0]                     rd1_e, rd2_e;
   logic [31:0]                     signimm_e;
   logic [31:0]                     aluout_e;
+  logic [31:0]                     pcplus4_e;
   logic [31:0]                     writedata_e;
   logic                            zero_e; // unused ALU port
 
@@ -81,8 +85,10 @@ module datapath(input  logic        clk, reset,
 
   mux2 #(32) U_PCBRMUX_F(.d0(pcplus4_f), .d1(pcbranch_d), .s(pcsrc_d), .y(pcnextbr_f));
 
-  mux2 #(32)  U_PCJMUX_F(.d0(pcnextbr_f), .d1(pcjump_d), .s(jump_d), .y(pcnext_f));
+  mux2 #(32)  U_PCJMUX_F(.d0(pcnextbr_f), .d1(pcnext_j_jr), .s(jump_d), .y(pcnext_f));
 
+  // New Mux 2 with a unique name
+  mux2 #(32) U_PCJRMUX_F(.d0(rd1_d), .d1(pcjump_d), .s(jumpr_d), .y(pcnext_j_jr));
   //--------------------------------------------------------------
   //   ID Stage (note control signals arrive here)
   //--------------------------------------------------------------
@@ -96,9 +102,8 @@ module datapath(input  logic        clk, reset,
   assign rd_d = instr_d[15:11];
   assign immed_d = instr_d[15:0];
   assign jpadr_d = instr_d[25:0];
-
+  // Add opcod
   assign pcjump_d = { pcplus4_d[31:28], jpadr_d, 2'b00 };  // jump target address
-
 
   regfile     U_RF_D(.clk(clk), .we3(regwrite_w), .ra1(rs_d), .ra2(rt_d),
                      .wa3(writereg_w), .wd3(result_w),
@@ -124,13 +129,14 @@ module datapath(input  logic        clk, reset,
                   .rs_d, .rt_d, .rd_d, .signimm_d,
                   .regwrite_e, .memtoreg_e, .memwrite_e, .alucontrol_e,
                   .alusrc_e, .regdst_e, .rd1_e, .rd2_e,
-                  .rs_e, .rt_e, .rd_e, .signimm_e);
+                  .rs_e, .rt_e, .rd_e, .signimm_e, .pcplus4_d, .pcplus4_e);
 
   // add forwarding muxes here
   assign srca_e = rd1_e;  // temporary
+//  assign srca_e = (jump_d) ? rs_e : rd1_e;  // Forward rs for jr instruction
   assign writedata_e = rd2_e; // temporary
-
-
+  
+  assign jal_e = jal_d;
                   // ALU logic
   mux2 #(32)  U_SRCBMUX(.d0(writedata_e), .d1(signimm_e), .s(alusrc_e), .y(srcb_e));
 
@@ -138,6 +144,9 @@ module datapath(input  logic        clk, reset,
                   .y(aluout_e), .zero(zero_e));
 
   mux2 #(5)   U_WRMUX(.d0(rt_e), .d1(rd_e), .s(regdst_e), .y(writereg_e));
+  
+  // New Mux2 
+  mux2 #(32)   U_WRJALMUX(.d0(rd2_e), .d1(pcplus4_e), .s(jal_e), .y(writereg_e));
 
   //--------------------------------------------------------------
   //   MEM Stage

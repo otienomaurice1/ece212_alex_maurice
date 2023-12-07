@@ -1,0 +1,45 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Sat Dec  2 19:24:40 2023
+# Process ID: 23484
+# Current directory: C:/Users/villalba/MPLABXProjects/ece212_alex_maurice/lab11
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent28148 C:\Users\villalba\MPLABXProjects\ece212_alex_maurice\lab11\lab11.xpr
+# Log file: C:/Users/villalba/MPLABXProjects/ece212_alex_maurice/lab11/vivado.log
+# Journal file: C:/Users/villalba/MPLABXProjects/ece212_alex_maurice/lab11\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/villalba/MPLABXProjects/ece212_alex_maurice/lab11/lab11.xpr
+update_compile_order -fileset sources_1
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top mux3 [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+refresh_design
+update_compile_order -fileset sources_1
+refresh_design
+refresh_design
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top mux2 [current_fileset]
+set_property top_lib xil_defaultlib [current_fileset]
+set_property top_file C:/Users/villalba/MPLABXProjects/ece212_alex_maurice/lab11/sv/mux2.sv [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+refresh_design
+update_compile_order -fileset sources_1
+refresh_design
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top datapath [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+refresh_design
+launch_simulation
+open_wave_config C:/Users/villalba/MPLABXProjects/ece212_alex_maurice/lab11/testbench_behav.wcfg
+source testbench.tcl
+close_sim
