@@ -7,7 +7,7 @@
 // Key modifications to this file (to enhance clarity):
 //  1. Use explicit port connections in instantiations
 //  2. Use explicitly named instruction subfields
-//--------------------------------------------------------------
+//-----------
 
 module datapath(input  logic        clk, reset,
   input logic         memtoreg_d, memwrite_d, pcsrc_d, alusrc_d,
@@ -34,7 +34,7 @@ module datapath(input  logic        clk, reset,
   // instr_f already declared as an input port
 
   //   ID Declarataions (not control signals are module inputs)
-
+  logic                            jal_d;
   logic [4:0]                      rs_d;
   logic [4:0]                      rt_d;
   logic [4:0]                      rd_d;
@@ -47,10 +47,10 @@ module datapath(input  logic        clk, reset,
 
   // EX Declarataions
 
-  logic         memtoreg_e, memwrite_e, alusrc_e;
-  logic         regdst_e, regwrite_e;
-  logic         jal_e;
-  logic [2:0]   alucontrol_e;
+  logic                           memtoreg_e, memwrite_e, alusrc_e;
+  logic                           regdst_e, regwrite_e;
+  logic                           jal_e;
+  logic [2:0]                     alucontrol_e;
 
   logic [4:0]                      rs_e;
   logic [4:0]                      rt_e;
@@ -65,15 +65,16 @@ module datapath(input  logic        clk, reset,
   logic                            zero_e; // unused ALU port
 
   // MEM Declarataions
-
+  logic                            jal_m;
   logic                            memtoreg_m, regwrite_m;
   logic [4:0]                      writereg_m;  // WB Declarations
+  logic [31:0]                     pcplus4_m;
 
   // WB Declarataions
-
+  logic                            jal_w;
   logic                            regwrite_w, memtoreg_w;
   logic [4:0]                      writereg_w;
-  logic [31:0]                     readdata_w, aluout_w, result_w;
+  logic [31:0]                     readdata_w, aluout_w, result_w,writebackdata_w, pcplus4_w;
 
   //--------------------------------------------------------------
   //   IF Stage
@@ -88,7 +89,7 @@ module datapath(input  logic        clk, reset,
   mux2 #(32)  U_PCJMUX_F(.d0(pcnextbr_f), .d1(pcnext_j_jr), .s(jump_d), .y(pcnext_f));
 
   // New Mux 2 with a unique name
-  mux2 #(32) U_PCJRMUX_F(.d0(rd1_d), .d1(pcjump_d), .s(jumpr_d), .y(pcnext_j_jr));
+  mux2 #(32) U_PCJRMUX_F(.d0(pcjump_d), .d1(rd1_d), .s(jumpr_d), .y(pcnext_j_jr));
   //--------------------------------------------------------------
   //   ID Stage (note control signals arrive here)
   //--------------------------------------------------------------
@@ -126,17 +127,17 @@ module datapath(input  logic        clk, reset,
   pr_d_e U_PR_D_E(.clk, .reset, .flush_e(1'b0),
                   .regwrite_d, .memtoreg_d, .memwrite_d, .alucontrol_d,
                   .alusrc_d, .regdst_d, .rd1_d, .rd2_d,
-                  .rs_d, .rt_d, .rd_d, .signimm_d,
+                  .rs_d, .rt_d, .rd_d, .signimm_d,.pcplus4_d,.jal_d,
                   .regwrite_e, .memtoreg_e, .memwrite_e, .alucontrol_e,
                   .alusrc_e, .regdst_e, .rd1_e, .rd2_e,
-                  .rs_e, .rt_e, .rd_e, .signimm_e, .pcplus4_d, .pcplus4_e);
+                  .rs_e, .rt_e, .rd_e, .signimm_e, .pcplus4_e,.jal_e);
 
   // add forwarding muxes here
   assign srca_e = rd1_e;  // temporary
-//  assign srca_e = (jump_d) ? rs_e : rd1_e;  // Forward rs for jr instruction
+ assign srca_e = (jump_d) ? rs_e : rd1_e;  // Forward rs for jr instruction
   assign writedata_e = rd2_e; // temporary
   
-  assign jal_e = jal_d;
+  //assign jal_e = jal_d;
                   // ALU logic
   mux2 #(32)  U_SRCBMUX(.d0(writedata_e), .d1(signimm_e), .s(alusrc_e), .y(srcb_e));
 
@@ -145,18 +146,16 @@ module datapath(input  logic        clk, reset,
 
   mux2 #(5)   U_WRMUX(.d0(rt_e), .d1(rd_e), .s(regdst_e), .y(writereg_e));
   
-  // New Mux2 
-  mux2 #(32)   U_WRJALMUX(.d0(rd2_e), .d1(pcplus4_e), .s(jal_e), .y(writereg_e));
-
+  
   //--------------------------------------------------------------
   //   MEM Stage
   //--------------------------------------------------------------
 
   pr_e_m U_PR_E_M(.clk, .reset,
-         .regwrite_e, .memtoreg_e, .memwrite_e,
-         .aluout_e, .writedata_e, .writereg_e,
-         .regwrite_m, .memtoreg_m, .memwrite_m,
-         .aluout_m, .writedata_m, .writereg_m);
+         .regwrite_e, .memtoreg_e, .memwrite_e,.jal_e,
+         .aluout_e, .writedata_e, .writereg_e,.pcplus4_e,
+         .regwrite_m, .memtoreg_m, .memwrite_m,.pcplus4_m,
+         .aluout_m, .writedata_m, .writereg_m,.jal_m);
 
   // memory connected through i/o ports
 
@@ -165,9 +164,11 @@ module datapath(input  logic        clk, reset,
   //--------------------------------------------------------------
 
   pr_m_w U_PR_M_W(.clk, .reset,
-        .regwrite_m, .memtoreg_m, .aluout_m, .readdata_m, .writereg_m,
-        .regwrite_w, .memtoreg_w, .aluout_w, .readdata_w, .writereg_w);
+        .regwrite_m, .memtoreg_m, .aluout_m, .readdata_m, .writereg_m,.jal_m,.pcplus4_m,
+        .regwrite_w, .memtoreg_w, .aluout_w, .readdata_w, .writereg_w,.jal_w,.pcplus4_w);
 
-    mux2 #(32)  U_RESMUX(.d0(aluout_w), .d1(readdata_w),.s(memtoreg_w), .y(result_w));
+    mux2 #(32)  U_RESMUX(.d0(aluout_w), .d1(readdata_w),.s(memtoreg_w), .y(writebackdata_w));
+    // New Mux2 
+    mux2 #(32)   U_WRJALMUX(.d0(writebackdata_w), .d1(pcplus4_w), .s(jal_w), .y(result_w));
 
 endmodule
