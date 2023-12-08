@@ -4,10 +4,14 @@ module pr_e_m(
   input logic [31:0] aluout_e,
   input logic [31:0] writedata_e,
   input logic [4:0] writereg_e,
+  input logic jal_e,
+  input logic [31:0] pcplus4_e,
   output logic regwrite_m, memtoreg_m, memwrite_m,
   output logic [31:0] aluout_m,
   output logic [31:0] writedata_m,
-  output logic [4:0] writereg_m
+  output logic [4:0] writereg_m,
+  output logic jal_m,
+  output logic [31:0] pcplus4_m
   );
 
   always_ff @ (posedge clk)
@@ -18,6 +22,8 @@ module pr_e_m(
     aluout_m <= '0;
     writedata_m <= '0;
     writereg_m <= '0;
+    jal_m <= '0;
+    pcplus4_m <='0;
   end
   else begin
     regwrite_m <= regwrite_e;
@@ -26,5 +32,7 @@ module pr_e_m(
     aluout_m <= aluout_e;
     writedata_m <= writedata_e;
     writereg_m <= writereg_e;
+    jal_m <= jal_e;
+    pcplus4_m <= pcplus4_e;
   end
 endmodule: pr_e_m
