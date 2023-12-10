@@ -36,8 +36,6 @@ module datapath(input  logic        clk, reset,
 
   //   ID Declarataions (not control signals are module inputs)
 
- 
-=======
   logic                            jal_d;
   logic [4:0]                      rs_d;
   logic [4:0]                      rt_d;
@@ -52,12 +50,10 @@ module datapath(input  logic        clk, reset,
   // EX Declarataions
 
   logic                           memtoreg_e, memwrite_e, alusrc_e;
-<<<<<<< HEAD
   logic                           regwrite_e;
   logic                           jal_e;
   logic [2:0]                     alucontrol_e;
   logic[1:0]                       regdst_e;
-=======
   logic                           regdst_e, regwrite_e;
   logic                           jal_e;
   logic [2:0]                     alucontrol_e;
@@ -146,8 +142,6 @@ module datapath(input  logic        clk, reset,
  //assign srca_e = (jump_d) ? rs_e : rd1_e;  // Forward rs for jr instruction
   assign writedata_e = rd2_e; // temporary
   
-  
-=======
  assign srca_e = (jump_d) ? rs_e : rd1_e;  // Forward rs for jr instruction
   assign writedata_e = rd2_e; // temporary
   
