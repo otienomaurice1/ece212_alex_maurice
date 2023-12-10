@@ -36,7 +36,8 @@ module mips(input  logic        clk, reset,
 
    // control signals
 
-   logic                        memtoreg_d, alusrc_d, regdst_d, regwrite_d, jump_d, pcsrc_d, jumpr_d,jal_d;
+   logic                        memtoreg_d, alusrc_d, regwrite_d, jump_d, pcsrc_d, jumpr_d,jal_d;
+   logic[1:0]                   regdst_d;
    logic [2:0]                  alucontrol_d;
 
    controller U_C(.opcode(opcode_d), .funct(funct_d), .zero(zero_d), .memtoreg(memtoreg_d),

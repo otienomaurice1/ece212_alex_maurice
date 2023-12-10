@@ -14,8 +14,9 @@
 
 module maindec (input mips_decls_p::opcode_t opcode,
                input mips_decls_p:: funct_t funct,
-		output logic memtoreg, memwrite, branch, alusrc, regdst, regwrite, jump, jumpr, jal,
-		output logic [1:0] aluop);
+		output logic memtoreg, memwrite, branch, alusrc, regwrite, jump, jumpr, jal,
+		output logic [1:0] aluop,
+		output logic[1:0]  regdst);
 
    import mips_decls_p::*;
 
@@ -32,7 +33,7 @@ module maindec (input mips_decls_p::opcode_t opcode,
 	      jump = 1'b0;
 	       end
 	      regwrite = 1'b1;
-	      regdst = 1'b1;
+	      regdst = 2'b01;
 	      alusrc = 1'b0;
 	      branch = 1'b0;
 	      memwrite = 1'b0;
@@ -43,7 +44,7 @@ module maindec (input mips_decls_p::opcode_t opcode,
 	   end
 	   OP_LW: begin
 	      regwrite = 1'b1;
-	      regdst = 1'b0;
+	      regdst = 2'b00;
 	      alusrc = 2'b1;
 	      branch = 1'b0;
 	      memwrite = 1'b0;
@@ -55,7 +56,7 @@ module maindec (input mips_decls_p::opcode_t opcode,
 	   end
 	   OP_SW: begin
 	      regwrite = 1'b0;
-	      regdst = 1'b0;
+	      regdst = 2'b00;
 	      alusrc = 1'b1;
 	      branch = 1'b0;
 	      memwrite = 1'b1;
@@ -67,7 +68,7 @@ module maindec (input mips_decls_p::opcode_t opcode,
 	   end
 	   OP_BEQ: begin
 	      regwrite = 1'b0;
-	      regdst = 1'b0;
+	      regdst = 2'b00;
 	      alusrc = 1'b0;
 	      branch = 1'b1;
 	      memwrite = 1'b0;
@@ -79,7 +80,7 @@ module maindec (input mips_decls_p::opcode_t opcode,
 	   end
 	   OP_ADDI: begin
 	      regwrite = 1'b1;
-	      regdst = 1'b0;
+	      regdst = 2'b00;
 	      alusrc = 1'b1;
 	      branch = 1'b0;
 	      memwrite = 1'b0;
@@ -91,7 +92,7 @@ module maindec (input mips_decls_p::opcode_t opcode,
 	   end
 	   OP_J: begin
 	      regwrite = 1'b0;
-	      regdst = 1'b0;
+	      regdst = 2'b00;
 	      alusrc = 1'b0;
 	      branch = 1'b0;
 	      memwrite = 1'b0;
@@ -103,7 +104,7 @@ module maindec (input mips_decls_p::opcode_t opcode,
 	   end
 	   OP_JAL: begin
 	      regwrite = 1'b1;
-	      regdst = 1'b0;
+	      regdst = 2'b10;
 	      alusrc = 1'b0;
 	      branch = 1'b0;
 	      memwrite = 1'b0;
@@ -115,7 +116,7 @@ module maindec (input mips_decls_p::opcode_t opcode,
 	   end
 	   default: begin     // unimplemented - use 'x to indicate error
 	      regwrite = 1'bx;
-	      regdst = 1'bx;
+	      regdst = 2'bxx;
 	      alusrc = 1'bx;
 	      branch = 1'bx;
 	      memwrite = 1'bx;

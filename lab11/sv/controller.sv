@@ -13,14 +13,14 @@
 //    4. Use *blocking* assignments for comb. logic
 //--------------------------------------------------------------
 
-
 module controller(
     input mips_decls_p::opcode_t opcode,
     input mips_decls_p::funct_t funct,
     input logic        zero,
+    output logic[1:0]  regdst,
     output logic       memtoreg, memwrite,
     output logic       pcsrc, alusrc,
-    output logic       regdst, regwrite,
+    output logic       regwrite,
     output logic       jump,jal,jumpr,
     output logic [2:0] alucontrol
     );

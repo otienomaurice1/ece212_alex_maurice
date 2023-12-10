@@ -1,0 +1,30 @@
+# compile verilog/system verilog design source files
+sv xil_defaultlib  \
+"../../../../../Documents/ece212_alex_maurice/lab11/sv/adder.sv" \
+"../../../../../Documents/ece212_alex_maurice/lab11/sv/alu.sv" \
+"../../../../../Documents/ece212_alex_maurice/lab11/sv/mips_decls_p.sv" \
+"../../../../../Documents/ece212_alex_maurice/lab11/sv/aludec.sv" \
+"../../../../../Documents/ece212_alex_maurice/lab11/sv/controller.sv" \
+"../../../../../Documents/ece212_alex_maurice/lab11/sv/datapath.sv" \
+"../../../../../Documents/ece212_alex_maurice/lab11/sv/dmem.sv" \
+"../../../../../Documents/ece212_alex_maurice/lab11/sv/imem.sv" \
+"../../../../../Documents/ece212_alex_maurice/lab11/sv/maindec.sv" \
+"../../../../../Documents/ece212_alex_maurice/lab11/sv/mips.sv" \
+"../../../../../Documents/ece212_alex_maurice/lab11/sv/mux2.sv" \
+"../../../../lab11.srcs/sources_1/new/mux3.sv" \
+"../../../../../Documents/ece212_alex_maurice/lab11/sv/pr_d_e.sv" \
+"../../../../../Documents/ece212_alex_maurice/lab11/sv/pr_e_m.sv" \
+"../../../../../Documents/ece212_alex_maurice/lab11/sv/pr_f_d.sv" \
+"../../../../../Documents/ece212_alex_maurice/lab11/sv/pr_m_w.sv" \
+"../../../../../Documents/ece212_alex_maurice/lab11/sv/pr_pc.sv" \
+"../../../../../Documents/ece212_alex_maurice/lab11/sv/regfile.sv" \
+"../../../../../Documents/ece212_alex_maurice/lab11/sv/signext.sv" \
+"../../../../../Documents/ece212_alex_maurice/lab11/sv/sl2.sv" \
+"../../../../../Documents/ece212_alex_maurice/lab11/sv/top.sv" \
+"../../../../../Documents/ece212_alex_maurice/lab11/sv/testbench.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
