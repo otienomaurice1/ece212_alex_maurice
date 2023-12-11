@@ -139,10 +139,6 @@ module datapath(input  logic        clk, reset,
 
   // add forwarding muxes here
   assign srca_e = rd1_e;  // temporary
- //assign srca_e = (jump_d) ? rs_e : rd1_e;  // Forward rs for jr instruction
-  assign writedata_e = rd2_e; // temporary
-  
- assign srca_e = (jump_d) ? rs_e : rd1_e;  // Forward rs for jr instruction
   assign writedata_e = rd2_e; // temporary
   
   //assign jal_e = jal_d;
