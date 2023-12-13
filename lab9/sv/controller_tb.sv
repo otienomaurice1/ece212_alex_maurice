@@ -10,25 +10,26 @@
 module controller_tb();
   mips_decls_p::opcode_t opcode;
   mips_decls_p::funct_t funct;
+	
      logic       clk, reset;
-   //  logic [5:0] opcode;
-   //  logic [5:0] funct;
      logic       zero;
      logic       pcen, memwrite, irwrite, regwrite;
      logic       alusrca, iord, memtoreg, regdst;
      logic [1:0] alusrcb, pcsrc;
      logic [2:0] alucontrol;
-import mips_decls_p::*;
+//
+//import the enum variables for opcode and funct fields
+  import mips_decls_p::*;
+	
   // instantiate device to be tested
   controller DUV(.clk,.opcode, .funct,.reset,.zero,.pcen, .memwrite,. irwrite,. regwrite,.alusrca,. iord,. memtoreg,. regdst,.alusrcb,. pcsrc,.alucontrol);
   
-  
-
   // generate clock to sequence tests
   always
     begin
       clk <= 1; # 5; clk <= 0; # 5;
     end
+	
 // initialize test
   initial
     begin
