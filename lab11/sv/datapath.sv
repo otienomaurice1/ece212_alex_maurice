@@ -35,11 +35,8 @@ module datapath(input  logic        clk, reset,
   // instr_f already declared as an input port
 
   //   ID Declarataions (not control signals are module inputs)
-<<<<<<< HEAD
- 
-=======
+
   logic                            jal_d;
->>>>>>> b553599bad692982d39464903327f63580aeab51
   logic [4:0]                      rs_d;
   logic [4:0]                      rt_d;
   logic [4:0]                      rd_d;
@@ -53,17 +50,13 @@ module datapath(input  logic        clk, reset,
   // EX Declarataions
 
   logic                           memtoreg_e, memwrite_e, alusrc_e;
-<<<<<<< HEAD
   logic                           regwrite_e;
   logic                           jal_e;
   logic [2:0]                     alucontrol_e;
   logic[1:0]                       regdst_e;
-=======
   logic                           regdst_e, regwrite_e;
   logic                           jal_e;
   logic [2:0]                     alucontrol_e;
-
->>>>>>> b553599bad692982d39464903327f63580aeab51
   logic [4:0]                      rs_e;
   logic [4:0]                      rt_e;
   logic [4:0]                      rd_e;
@@ -146,17 +139,9 @@ module datapath(input  logic        clk, reset,
 
   // add forwarding muxes here
   assign srca_e = rd1_e;  // temporary
-<<<<<<< HEAD
- //assign srca_e = (jump_d) ? rs_e : rd1_e;  // Forward rs for jr instruction
-  assign writedata_e = rd2_e; // temporary
-  
-  
-=======
- assign srca_e = (jump_d) ? rs_e : rd1_e;  // Forward rs for jr instruction
   assign writedata_e = rd2_e; // temporary
   
   //assign jal_e = jal_d;
->>>>>>> b553599bad692982d39464903327f63580aeab51
                   // ALU logic
   mux2 #(32)  U_SRCBMUX(.d0(writedata_e), .d1(signimm_e), .s(alusrc_e), .y(srcb_e));
 
@@ -165,11 +150,7 @@ module datapath(input  logic        clk, reset,
 //expanded the selector signal to 2 bits to select btwn three inputs. write to register 31 during jal
   mux3 #(5)   U_WRMUX(.d0(rt_e), .d1(rd_e),.d2(5'd31), .s(regdst_e), .y(writereg_e));
   
-  
-<<<<<<< HEAD
-=======
-  
->>>>>>> b553599bad692982d39464903327f63580aeab51
+
   //--------------------------------------------------------------
   //   MEM Stage
   //--------------------------------------------------------------
