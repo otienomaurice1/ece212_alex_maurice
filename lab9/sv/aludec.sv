@@ -6,32 +6,41 @@
 // features by John Nestor May 2018
 //--------------------------------------------------------------
 module aludec(
-    mips_decls_p::funct_t funct,
+    input  mips_decls_p::funct_t funct,
     input  logic [1:0] aluop,
     output logic [2:0] alucontrol
     );
 
-   import mips_decls_p::*;
-
-  // ADD CODE HERE
-  
+ import mips_decls_p::*;
   always_comb begin 
   // Instruction - Opcode
-  // add 100000
-  // addi 001000
-  // and 100100
-  // div 011010
-  // mult 011000
-  // nor 100111
-  // or 100101
-  // sub 100010
-  
-
+ if(aluop == 2'b00)
+       alucontrol = 3'b010;
+  else if (aluop == 2'b01)
+       alucontrol = 3'b110;
+  else if (aluop == 2'b10)begin
+    case(funct)
+      // add 
+      6'b100000:  alucontrol = 3'b010;
+     // addi 
+     6'b001000:  alucontrol = 3'b010;
+     // and
+     6'b100100:  alucontrol = 3'b000;
+     // div 
+      6'b011010:   alucontrol = 3'b011;
+      // mult 
+      6'b011000:   alucontrol = 3'b011;
+      // nor 
+      6'b100111:    alucontrol = 3'b011;
+      // or 
+      6'b100101:   alucontrol = 3'b001;
+      // sub
+      6'b100010:    alucontrol = 3'b110;
+      
+      default:      alucontrol = 3'b011;
+      endcase
+     end
+   else 
+      alucontrol = 3'b011;
   end
-  // Complete the design for the ALU Decoder.
-  // Your design goes here.  Remember that this is a combinational
-  // module.
-
-  // Remember that you may also reuse any code from previous labs.
-
 endmodule // aludec

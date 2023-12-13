@@ -41,8 +41,8 @@ module maindec(
 
   // state register
   always_ff @(posedge clk)
-    if(reset) state = FETCH;
-    else state = next;
+    if(reset) state <= FETCH;
+    else state <= next;
 
   // ADD CODE HERE
   // Finish entering the next state logic below.  We've completed the first
@@ -50,8 +50,10 @@ module maindec(
 
   // next state logic
   always_comb begin
+  //FETCH
       case(state)
           FETCH:   next = DECODE;
+  //DECODE
           DECODE:  begin
               case(opcode)
                   OP_LW:      next = MEMADR;
@@ -63,7 +65,7 @@ module maindec(
                   default:     next = ERROR; // should never happen
               endcase
           end
-      // Add code here (DONE)
+      // LW
       MEMADR: 
       if (OP_LW) next = MEMRD;
       else next = MEMWR;

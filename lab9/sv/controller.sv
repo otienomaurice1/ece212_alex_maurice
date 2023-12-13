@@ -23,7 +23,7 @@ module controller(
   // ADD CODE HERE
   
   always_comb begin
-  if(zero && branch || pcwrite ) pcen = 1; 
+  if((zero && branch )|| pcwrite ) pcen = 1; 
   else pcen = 0; 
   
   end
