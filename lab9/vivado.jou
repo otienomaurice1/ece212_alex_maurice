@@ -1,14 +1,13 @@
 #-----------------------------------------------------------
-# Vivado v2023.1 (64-bit)
-# SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
-# IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
-# SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
-# Start of session at: Wed Dec 13 01:14:23 2023
-# Process ID: 21944
-# Current directory: C:/Users/User/Documents/ece212_alex_maurice/lab9
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent17980 C:\Users\User\Documents\ece212_alex_maurice\lab9\lab9.xpr
-# Log file: C:/Users/User/Documents/ece212_alex_maurice/lab9/vivado.log
-# Journal file: C:/Users/User/Documents/ece212_alex_maurice/lab9\vivado.jou
-# Running On: KIRBYCIRC, OS: Windows, CPU Frequency: 2904 MHz, CPU Physical cores: 8, Host memory: 16851 MB
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Wed Dec 13 14:21:38 2023
+# Process ID: 27868
+# Current directory: C:/Users/otienom/Documents/ece212_alex_maurice/lab9
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent15588 C:\Users\otienom\Documents\ece212_alex_maurice\lab9\lab9.xpr
+# Log file: C:/Users/otienom/Documents/ece212_alex_maurice/lab9/vivado.log
+# Journal file: C:/Users/otienom/Documents/ece212_alex_maurice/lab9\vivado.jou
 #-----------------------------------------------------------
 start_gui
+open_project C:/Users/otienom/Documents/ece212_alex_maurice/lab9/lab9.xpr

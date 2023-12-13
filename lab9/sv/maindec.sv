@@ -67,8 +67,8 @@ module maindec(
           end
       // LW
       MEMADR: 
-      if (OP_LW) next = MEMRD;
-      else next = MEMWR;
+      if (opcode == OP_LW) begin next = MEMRD; end
+      else begin next = MEMWR; end
       MEMRD: next = MEMWB;
       MEMWB: next = FETCH;
       MEMWR: next = FETCH; 
@@ -125,6 +125,7 @@ end
           
           MEMRD: begin
               iord = 1;
+             
           end
           
           MEMWB: begin
@@ -134,7 +135,7 @@ end
           
           MEMWR: begin
               iord = 1;
-              memwrite = 0;
+              memwrite = 1;
           end
           
           RTYPEEX: begin

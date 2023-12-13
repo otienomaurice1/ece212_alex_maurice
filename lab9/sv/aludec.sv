@@ -21,21 +21,24 @@ module aludec(
   else if (aluop == 2'b10)begin
     case(funct)
       // add 
-      6'b100000:  alucontrol = 3'b010;
-     // addi 
-     6'b001000:  alucontrol = 3'b010;
-     // and
-     6'b100100:  alucontrol = 3'b000;
-     // div 
+      F_ADD:  alucontrol = 3'b010;
+        // and
+      F_AND:  alucontrol = 3'b000;
+       // or 
+      F_OR:   alucontrol = 3'b001;
+       // sub
+      F_SUB:    alucontrol = 3'b110;
+        //
+      F_SLT:    alucontrol = 3'b111;
+       // addi 
+      6'b001000:  alucontrol = 3'b010;
+       // div 
       6'b011010:   alucontrol = 3'b011;
       // mult 
       6'b011000:   alucontrol = 3'b011;
       // nor 
       6'b100111:    alucontrol = 3'b011;
-      // or 
-      6'b100101:   alucontrol = 3'b001;
-      // sub
-      6'b100010:    alucontrol = 3'b110;
+      
       
       default:      alucontrol = 3'b011;
       endcase

@@ -1,0 +1,9 @@
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/otienom/Documents/ece212_alex_maurice/lab9/sv/mips_decls_p.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/otienom/Documents/ece212_alex_maurice/lab9/sv/aludec.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module aludec
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/otienom/Documents/ece212_alex_maurice/lab9/sv/controller.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module controller
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/otienom/Documents/ece212_alex_maurice/lab9/sv/maindec.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module maindec
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/otienom/Documents/ece212_alex_maurice/lab9/lab9.srcs/sim_1/new/controller_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module controller_tb

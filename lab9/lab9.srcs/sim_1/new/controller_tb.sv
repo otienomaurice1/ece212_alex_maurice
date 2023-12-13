@@ -7,20 +7,34 @@
 // John Nestor, March 2019
 //------------------------------------------------
 
-module controller_tb();
-  mips_decls_p::opcode_t opcode;
-  mips_decls_p::funct_t funct;
+module controller_tb;
      logic       clk, reset;
-   //  logic [5:0] opcode;
-   //  logic [5:0] funct;
+     logic [5:0] opcode;
+     logic [5:0] funct;
      logic       zero;
      logic       pcen, memwrite, irwrite, regwrite;
      logic       alusrca, iord, memtoreg, regdst;
      logic [1:0] alusrcb, pcsrc;
      logic [2:0] alucontrol;
-import mips_decls_p::*;
+
   // instantiate device to be tested
-  controller DUV(.clk,.opcode, .funct,.reset,.zero,.pcen, .memwrite,. irwrite,. regwrite,.alusrca,. iord,. memtoreg,. regdst,.alusrcb,. pcsrc,.alucontrol);
+  controller DUV(.clk,
+  .reset,
+  .zero,
+  .pcen, 
+  .memwrite,
+  .irwrite,
+  . regwrite,
+  .alusrca,
+  . iord,
+  . memtoreg,
+  . regdst,
+  .alusrcb,
+  . pcsrc,
+  .alucontrol,
+  .opcode,
+   .funct
+   );
   
   
 
@@ -35,12 +49,12 @@ import mips_decls_p::*;
       reset <= 1; #  9;
       reset <= 0;
        //ADD
-      opcode <= OP_J;
-      funct  <=  F_SLT;
+     opcode <= 6'b000000;
+     funct  <= 6'b100000;
        zero <= 0;
     end
 
-   localparam LIMIT = 5;  // don't let simulation go on forever
+   localparam LIMIT = 4;  // don't let simulation go on forever
    
    integer cycle = 0;
 
