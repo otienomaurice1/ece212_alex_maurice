@@ -1,0 +1,35 @@
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/otienom/Documents/ece212_alex_maurice/lab10/sv/alu.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/otienom/Documents/ece212_alex_maurice/lab10/sv/mips_decls_p.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/otienom/Documents/ece212_alex_maurice/lab10/sv/aludec.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module aludec
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/otienom/Documents/ece212_alex_maurice/lab10/sv/controller.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module controller
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/otienom/Documents/ece212_alex_maurice/lab10/sv/datapath.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module datapath
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/otienom/Documents/ece212_alex_maurice/lab10/sv/flopenr.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module flopenr
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/otienom/Documents/ece212_alex_maurice/lab10/sv/flopr.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module flopr
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/otienom/Documents/ece212_alex_maurice/lab10/sv/maindec.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module maindec
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/otienom/Documents/ece212_alex_maurice/lab10/sv/mem.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mem
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/otienom/Documents/ece212_alex_maurice/lab10/sv/mips_multi.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mips_multi
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/otienom/Documents/ece212_alex_maurice/lab10/sv/mips_multi_top.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mips_multi_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/otienom/Documents/ece212_alex_maurice/lab10/sv/mux2.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux2
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/otienom/Documents/ece212_alex_maurice/lab10/sv/mux3.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux3
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/otienom/Documents/ece212_alex_maurice/lab10/sv/mux4.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux4
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/otienom/Documents/ece212_alex_maurice/lab10/sv/regfile.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module regfile
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/otienom/Documents/ece212_alex_maurice/lab10/sv/signext.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module signext
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/otienom/Documents/ece212_alex_maurice/lab10/sv/sl2.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sl2
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/otienom/Documents/ece212_alex_maurice/lab10/sv/tetbench.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module testbench

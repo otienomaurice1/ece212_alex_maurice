@@ -1,0 +1,26 @@
+# compile verilog/system verilog design source files
+sv xil_defaultlib  \
+"../../../../sv/alu.sv" \
+"../../../../sv/mips_decls_p.sv" \
+"../../../../sv/aludec.sv" \
+"../../../../sv/controller.sv" \
+"../../../../sv/datapath.sv" \
+"../../../../sv/flopenr.sv" \
+"../../../../sv/flopr.sv" \
+"../../../../sv/maindec.sv" \
+"../../../../sv/mem.sv" \
+"../../../../sv/mips_multi.sv" \
+"../../../../sv/mips_multi_top.sv" \
+"../../../../sv/mux2.sv" \
+"../../../../sv/mux3.sv" \
+"../../../../sv/mux4.sv" \
+"../../../../sv/regfile.sv" \
+"../../../../sv/signext.sv" \
+"../../../../sv/sl2.sv" \
+"../../../../sv/tetbench.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
