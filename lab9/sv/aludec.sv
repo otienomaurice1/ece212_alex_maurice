@@ -30,18 +30,9 @@ module aludec(
       F_SUB:    alucontrol = 3'b110;
         //
       F_SLT:    alucontrol = 3'b111;
-       // addi 
-      6'b001000:  alucontrol = 3'b010;
-       // div 
-      6'b011010:   alucontrol = 3'b011;
-      // mult 
-      6'b011000:   alucontrol = 3'b011;
-      // nor 
-      6'b100111:    alucontrol = 3'b011;
-      
-      
-      default:      alucontrol = 3'b011;
-      endcase
+      default:  alucontrol = 3'b011;
+    
+    endcase
      end
    else 
       alucontrol = 3'b011;
