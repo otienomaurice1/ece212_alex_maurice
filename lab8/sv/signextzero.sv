@@ -7,11 +7,11 @@
 //   added a control signal to select between sign-extend and zero-extend
 //--------------------------------------------------------------
 
-module signext(
+module signextzero(
     input  logic [15:0] a,
     output logic [31:0] y
     );
 
-    assign y = {{16{0}}, a};
+    assign y = {{16{1'b0}}, a};
 
 endmodule
