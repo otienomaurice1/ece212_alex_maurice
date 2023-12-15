@@ -1,0 +1,24 @@
+0.7
+2020.2
+Nov 18 2020
+09:47:47
+C:/Users/otienom/Documents/ece212_alex_maurice/lab8/Mips_32_bit_sing_cycle_processor.sim/sim_1/behav/xsim/glbl.v,1605673889,verilog,,,,glbl,,uvm,,,,,,
+C:/Users/otienom/Documents/ece212_alex_maurice/lab8/Mips_32_bit_sing_cycle_processor.srcs/sources_1/new/signextzero.sv,1702594814,systemVerilog,,C:/Users/otienom/Documents/mips_L_single/sv/sl2.sv,,signextzero,,uvm,,,,,,
+C:/Users/otienom/Documents/ece212_alex_maurice/lab8/sv/mux3.sv,1702582667,systemVerilog,,C:/Users/otienom/Documents/mips_L_single/sv/regfile.sv,,mux3,,uvm,,,,,,
+C:/Users/otienom/Documents/mips_L_single/sv/adder.sv,1702576364,systemVerilog,,C:/Users/otienom/Documents/mips_L_single/sv/alu.sv,,adder,,uvm,,,,,,
+C:/Users/otienom/Documents/mips_L_single/sv/alu.sv,1702576364,systemVerilog,,C:/Users/otienom/Documents/mips_L_single/sv/mips_decls_p.sv,,alu,,uvm,,,,,,
+C:/Users/otienom/Documents/mips_L_single/sv/aludec.sv,1702586227,systemVerilog,,C:/Users/otienom/Documents/mips_L_single/sv/controller.sv,,aludec,,uvm,,,,,,
+C:/Users/otienom/Documents/mips_L_single/sv/controller.sv,1702594819,systemVerilog,,C:/Users/otienom/Documents/mips_L_single/sv/datapath.sv,,controller,,uvm,,,,,,
+C:/Users/otienom/Documents/mips_L_single/sv/datapath.sv,1702588458,systemVerilog,,C:/Users/otienom/Documents/mips_L_single/sv/dmem.sv,,datapath,,uvm,,,,,,
+C:/Users/otienom/Documents/mips_L_single/sv/dmem.sv,1702576364,systemVerilog,,C:/Users/otienom/Documents/mips_L_single/sv/flopr.sv,,dmem,,uvm,,,,,,
+C:/Users/otienom/Documents/mips_L_single/sv/flopr.sv,1702576364,systemVerilog,,C:/Users/otienom/Documents/mips_L_single/sv/imem.sv,,flopr,,uvm,,,,,,
+C:/Users/otienom/Documents/mips_L_single/sv/imem.sv,1702585240,systemVerilog,,C:/Users/otienom/Documents/mips_L_single/sv/maindec.sv,,imem,,uvm,,,,,,
+C:/Users/otienom/Documents/mips_L_single/sv/maindec.sv,1702590313,systemVerilog,,C:/Users/otienom/Documents/mips_L_single/sv/mips.sv,,maindec,,uvm,,,,,,
+C:/Users/otienom/Documents/mips_L_single/sv/mips.sv,1702588795,systemVerilog,,C:/Users/otienom/Documents/mips_L_single/sv/mux2.sv,,mips,,uvm,,,,,,
+C:/Users/otienom/Documents/mips_L_single/sv/mips_decls_p.sv,1702576364,systemVerilog,C:/Users/otienom/Documents/mips_L_single/sv/aludec.sv;C:/Users/otienom/Documents/mips_L_single/sv/controller.sv;C:/Users/otienom/Documents/mips_L_single/sv/maindec.sv;C:/Users/otienom/Documents/mips_L_single/sv/mips.sv,C:/Users/otienom/Documents/mips_L_single/sv/aludec.sv,,mips_decls_p,,uvm,,,,,,
+C:/Users/otienom/Documents/mips_L_single/sv/mux2.sv,1702576364,systemVerilog,,C:/Users/otienom/Documents/ece212_alex_maurice/lab8/sv/mux3.sv,,mux2,,uvm,,,,,,
+C:/Users/otienom/Documents/mips_L_single/sv/regfile.sv,1702576364,systemVerilog,,C:/Users/otienom/Documents/mips_L_single/sv/signext.sv,,regfile,,uvm,,,,,,
+C:/Users/otienom/Documents/mips_L_single/sv/signext.sv,1702576364,systemVerilog,,C:/Users/otienom/Documents/ece212_alex_maurice/lab8/Mips_32_bit_sing_cycle_processor.srcs/sources_1/new/signextzero.sv,,signext,,uvm,,,,,,
+C:/Users/otienom/Documents/mips_L_single/sv/sl2.sv,1702576364,systemVerilog,,C:/Users/otienom/Documents/mips_L_single/sv/top.sv,,sl2,,uvm,,,,,,
+C:/Users/otienom/Documents/mips_L_single/sv/testbench.sv,1702576364,systemVerilog,,,,testbench,,uvm,,,,,,
+C:/Users/otienom/Documents/mips_L_single/sv/top.sv,1702576364,systemVerilog,,C:/Users/otienom/Documents/mips_L_single/sv/testbench.sv,,top,,uvm,,,,,,

@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Thu Nov  9 15:42:36 2023
+# Process ID: 4992
+# Current directory: C:/Users/otienom/Documents/ece212_alex_maurice/lab8/processor_designs/Mips_32_bit_sing_cycle_processor/Mips_32_bit_sing_cycle_processor.runs/synth_1
+# Command line: vivado.exe -log mips.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source mips.tcl
+# Log file: C:/Users/otienom/Documents/ece212_alex_maurice/lab8/processor_designs/Mips_32_bit_sing_cycle_processor/Mips_32_bit_sing_cycle_processor.runs/synth_1/mips.vds
+# Journal file: C:/Users/otienom/Documents/ece212_alex_maurice/lab8/processor_designs/Mips_32_bit_sing_cycle_processor/Mips_32_bit_sing_cycle_processor.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source mips.tcl -notrace
