@@ -95,7 +95,7 @@ module datapath(
 flopr   #(32)     U_AREG(. clk, .reset,. d(rd1),.q(A));                     // alu source A register
 flopr   #(32)     U_BREG(. clk, .reset,. d(rd2),.q(B));                     //alu source B register
 mux2    #(32)    U_ALSRCAMUX(.d0(pc),.d1(A),.s(alusrca),.y(srca));          //alu source A multiplexer
-mux4    #(32)    U_ALSRCBMUX(.d0(B), .d1(31'd4), .d2(signimm), .d3(signimmshift4mem),.s(alusrcb),.y(srcb)); // alu source B multiplexer
+mux4    #(32)    U_ALSRCBMUX(.d0(B), .d1(32'd4), .d2(signimm), .d3(signimmshift4mem),.s(alusrcb),.y(srcb)); // alu source B multiplexer
 mux3    #(32)    U_PCSRCMUX(. d0(aluresult),.d1(aluout),.d2(pcjump),.s(pcsrc),.y(pcnext));  //PC source multiplexer
 alu              U_ALU(.a(srca),.b(srcb),.f(alucontrol),.y(aluresult),.zero);  // alu file             
 flopr   #(32)    U_ALUOUT(. clk, .reset,. d(aluresult),.q(aluout));           // alu output register

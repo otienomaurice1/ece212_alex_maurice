@@ -115,7 +115,7 @@ end
               alusrca = 0;
               alusrcb = 2'b11;
               aluop = 2'b00;
-              pcwrite = 1;
+              pcwrite = 0;
           end
      
           MEMADR: begin
@@ -131,7 +131,7 @@ end
           
           MEMWB: begin
               memtoreg = 1;
-              regwrite = 0;
+              regwrite = 1;
           end
           
           MEMWR: begin
