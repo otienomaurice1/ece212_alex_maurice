@@ -4,7 +4,7 @@ Nov 18 2020
 09:47:47
 C:/Users/otienom/Documents/ece212_alex_maurice/lab9/lab9.sim/sim_1/behav/xsim/glbl.v,1605673889,verilog,,,,glbl,,uvm,,,,,,
 C:/Users/otienom/Documents/ece212_alex_maurice/lab9/lab9.srcs/sim_1/new/controller_tb.sv,1702495558,systemVerilog,,,,controller_tb,,uvm,,,,,,
-C:/Users/otienom/Documents/ece212_alex_maurice/lab9/sv/aludec.sv,1702492872,systemVerilog,,C:/Users/otienom/Documents/ece212_alex_maurice/lab9/sv/controller.sv,,aludec,,uvm,,,,,,
+C:/Users/otienom/Documents/ece212_alex_maurice/lab9/sv/aludec.sv,1702512951,systemVerilog,,C:/Users/otienom/Documents/ece212_alex_maurice/lab9/sv/controller.sv,,aludec,,uvm,,,,,,
 C:/Users/otienom/Documents/ece212_alex_maurice/lab9/sv/controller.sv,1702492872,systemVerilog,,C:/Users/otienom/Documents/ece212_alex_maurice/lab9/sv/maindec.sv,,controller,,uvm,,,,,,
 C:/Users/otienom/Documents/ece212_alex_maurice/lab9/sv/maindec.sv,1702492872,systemVerilog,,C:/Users/otienom/Documents/ece212_alex_maurice/lab9/lab9.srcs/sim_1/new/controller_tb.sv,,maindec,,uvm,,,,,,
 C:/Users/otienom/Documents/ece212_alex_maurice/lab9/sv/mips_decls_p.sv,1702250409,systemVerilog,C:/Users/otienom/Documents/ece212_alex_maurice/lab9/sv/aludec.sv;C:/Users/otienom/Documents/ece212_alex_maurice/lab9/sv/controller.sv;C:/Users/otienom/Documents/ece212_alex_maurice/lab9/sv/maindec.sv,C:/Users/otienom/Documents/ece212_alex_maurice/lab9/sv/aludec.sv,,mips_decls_p,,uvm,,,,,,

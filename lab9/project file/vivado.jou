@@ -1,0 +1,135 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Wed Dec 13 14:21:38 2023
+# Process ID: 27868
+# Current directory: C:/Users/otienom/Documents/ece212_alex_maurice/lab9
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent15588 C:\Users\otienom\Documents\ece212_alex_maurice\lab9\lab9.xpr
+# Log file: C:/Users/otienom/Documents/ece212_alex_maurice/lab9/vivado.log
+# Journal file: C:/Users/otienom/Documents/ece212_alex_maurice/lab9\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/otienom/Documents/ece212_alex_maurice/lab9/lab9.xpr
+update_compile_order -fileset sources_1
+close_project
+create_project lab10 C:/Users/otienom/Documents/ece212_alex_maurice/lab10 -part xc7vx485tffg1157-1
+add_files -norecurse {C:/Users/otienom/Documents/ece212_alex_maurice/lab10/sv/controller.sv C:/Users/otienom/Documents/ece212_alex_maurice/lab10/sv/alu.sv C:/Users/otienom/Documents/ece212_alex_maurice/lab10/sv/datapath.sv C:/Users/otienom/Documents/ece212_alex_maurice/lab10/sv/mem.sv C:/Users/otienom/Documents/ece212_alex_maurice/lab10/sv/mips_multi_top.sv C:/Users/otienom/Documents/ece212_alex_maurice/lab10/sv/regfile.sv C:/Users/otienom/Documents/ece212_alex_maurice/lab10/sv/controller_tb.sv C:/Users/otienom/Documents/ece212_alex_maurice/lab10/sv/aludec.sv C:/Users/otienom/Documents/ece212_alex_maurice/lab10/sv/mux2.sv C:/Users/otienom/Documents/ece212_alex_maurice/lab10/sv/mux4.sv C:/Users/otienom/Documents/ece212_alex_maurice/lab10/sv/sl2.sv C:/Users/otienom/Documents/ece212_alex_maurice/lab10/sv/mux3.sv C:/Users/otienom/Documents/ece212_alex_maurice/lab10/sv/signext.sv C:/Users/otienom/Documents/ece212_alex_maurice/lab10/sv/mips_decls_p.sv C:/Users/otienom/Documents/ece212_alex_maurice/lab10/sv/maindec.sv C:/Users/otienom/Documents/ece212_alex_maurice/lab10/sv/mips_multi.sv C:/Users/otienom/Documents/ece212_alex_maurice/lab10/sv/flopenr.sv C:/Users/otienom/Documents/ece212_alex_maurice/lab10/sv/flopr.sv}
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+add_files -fileset sim_1 -norecurse C:/Users/otienom/Documents/ece212_alex_maurice/lab10/sv/memfile.dat
+add_files -fileset sim_1 -norecurse C:/Users/otienom/Documents/ece212_alex_maurice/lab10/sv/testbench.sv
+update_compile_order -fileset sim_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top datapath [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+refresh_design
+refresh_design
+refresh_design
+refresh_design
+refresh_design
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top mips_multi [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+refresh_design
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top mips_multi_top [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+refresh_design
+launch_simulation
+source mips_multi_top.tcl
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open C:/Users/otienom/Documents/ece212_alex_maurice/lab10/sv/tetbench_tb.sv w ]
+add_files -fileset sim_1 C:/Users/otienom/Documents/ece212_alex_maurice/lab10/sv/tetbench_tb.sv
+update_compile_order -fileset sim_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top tetbench_tb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+export_ip_user_files -of_objects  [get_files C:/Users/otienom/Documents/ece212_alex_maurice/lab10/sv/controller_tb.sv] -no_script -reset -force -quiet
+remove_files  C:/Users/otienom/Documents/ece212_alex_maurice/lab10/sv/controller_tb.sv
+update_compile_order -fileset sim_1
+export_ip_user_files -of_objects  [get_files C:/Users/otienom/Documents/ece212_alex_maurice/lab10/sv/testbench.sv] -no_script -reset -force -quiet
+remove_files  -fileset sim_1 C:/Users/otienom/Documents/ece212_alex_maurice/lab10/sv/testbench.sv
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+add_files -fileset sim_1 -norecurse C:/Users/otienom/Documents/ece212_alex_maurice/lab10/sv/tetbench.sv
+update_compile_order -fileset sim_1
+export_ip_user_files -of_objects  [get_files C:/Users/otienom/Documents/ece212_alex_maurice/lab10/sv/tetbench_tb.sv] -no_script -reset -force -quiet
+remove_files  -fileset sim_1 C:/Users/otienom/Documents/ece212_alex_maurice/lab10/sv/tetbench_tb.sv
+launch_simulation
+close_sim
+launch_simulation
+launch_simulation
+source testbench.tcl
+current_wave_config {Untitled 2}
+add_wave {{/testbench/DUV}} 
+current_wave_config {Untitled 2}
+add_wave {{/testbench/DUV/U_MIPS/U_DP}} 
+restart
+run all
+current_wave_config {Untitled 2}
+add_wave {{/testbench/DUV/U_MIPS/U_CTL/U_MAINDEC/state}} 
+relaunch_sim
+relaunch_sim
+save_wave_config {C:/Users/otienom/Documents/ece212_alex_maurice/lab10/testbench_behav.wcfg}
+add_files -fileset sim_1 -norecurse C:/Users/otienom/Documents/ece212_alex_maurice/lab10/testbench_behav.wcfg
+set_property xsim.view C:/Users/otienom/Documents/ece212_alex_maurice/lab10/testbench_behav.wcfg [get_filesets sim_1]
+close_sim
+launch_simulation
+open_wave_config C:/Users/otienom/Documents/ece212_alex_maurice/lab10/testbench_behav.wcfg
+source testbench.tcl
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top mux3 [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+refresh_design
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top mips_multi_top [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+refresh_design
+current_wave_config {testbench_behav.wcfg}
+add_wave {{/testbench/DUV/U_MIPS/U_DP/A}} 
+current_wave_config {testbench_behav.wcfg}
+add_wave {{/testbench/DUV/U_MIPS/U_DP/B}} 
+current_wave_config {testbench_behav.wcfg}
+add_wave {{/testbench/DUV/U_MIPS/U_DP/srca}} 
+current_wave_config {testbench_behav.wcfg}
+add_wave {{/testbench/DUV/U_MIPS/U_DP/srcb}} 
+relaunch_sim
+relaunch_sim
+relaunch_sim
+run all
+current_wave_config {testbench_behav.wcfg}
+add_wave {{/testbench/DUV/U_MIPS/U_DP/aluresult}} 
+relaunch_sim
+run all
+current_wave_config {testbench_behav.wcfg}
+add_wave {{/testbench/DUV/U_MIPS/U_DP/U_REGFILE/rf[2]}} 
+relaunch_sim

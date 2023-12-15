@@ -36,8 +36,8 @@ module controller_tb();
       reset <= 1; #  9;
       reset <= 0;
        //ADD
-      opcode <= OP_J;
-      funct  <=  F_SLT;
+      opcode <= OP_RTYPE;
+      funct  <=  F_ADD;
        zero <= 0;
     end
 
