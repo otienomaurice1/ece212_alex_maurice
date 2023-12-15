@@ -1,0 +1,24 @@
+0.7
+2020.2
+Nov 18 2020
+09:47:47
+C:/Users/otienom/Documents/ece212_alex_maurice/lab8/project file/project_1/project_1.sim/sim_1/behav/xsim/glbl.v,1605673889,verilog,,,,glbl,,uvm,,,,,,
+C:/Users/otienom/Documents/ece212_alex_maurice/lab8/sv/adder.sv,1702667435,systemVerilog,,C:/Users/otienom/Documents/ece212_alex_maurice/lab8/sv/alu.sv,,adder,,uvm,,,,,,
+C:/Users/otienom/Documents/ece212_alex_maurice/lab8/sv/alu.sv,1702667435,systemVerilog,,C:/Users/otienom/Documents/ece212_alex_maurice/lab8/sv/mips_decls_p.sv,,alu,,uvm,,,,,,
+C:/Users/otienom/Documents/ece212_alex_maurice/lab8/sv/aludec.sv,1702670370,systemVerilog,,C:/Users/otienom/Documents/ece212_alex_maurice/lab8/sv/controller.sv,,aludec,,uvm,,,,,,
+C:/Users/otienom/Documents/ece212_alex_maurice/lab8/sv/controller.sv,1702668723,systemVerilog,,C:/Users/otienom/Documents/ece212_alex_maurice/lab8/sv/datapath.sv,,controller,,uvm,,,,,,
+C:/Users/otienom/Documents/ece212_alex_maurice/lab8/sv/datapath.sv,1702668723,systemVerilog,,C:/Users/otienom/Documents/ece212_alex_maurice/lab8/sv/dmem.sv,,datapath,,uvm,,,,,,
+C:/Users/otienom/Documents/ece212_alex_maurice/lab8/sv/dmem.sv,1702667435,systemVerilog,,C:/Users/otienom/Documents/ece212_alex_maurice/lab8/sv/flopr.sv,,dmem,,uvm,,,,,,
+C:/Users/otienom/Documents/ece212_alex_maurice/lab8/sv/flopr.sv,1702667435,systemVerilog,,C:/Users/otienom/Documents/ece212_alex_maurice/lab8/sv/imem.sv,,flopr,,uvm,,,,,,
+C:/Users/otienom/Documents/ece212_alex_maurice/lab8/sv/imem.sv,1702669149,systemVerilog,,C:/Users/otienom/Documents/ece212_alex_maurice/lab8/sv/maindec.sv,,imem,,uvm,,,,,,
+C:/Users/otienom/Documents/ece212_alex_maurice/lab8/sv/maindec.sv,1702668723,systemVerilog,,C:/Users/otienom/Documents/ece212_alex_maurice/lab8/sv/mips.sv,,maindec,,uvm,,,,,,
+C:/Users/otienom/Documents/ece212_alex_maurice/lab8/sv/mips.sv,1702668723,systemVerilog,,C:/Users/otienom/Documents/ece212_alex_maurice/lab8/sv/mux2.sv,,mips,,uvm,,,,,,
+C:/Users/otienom/Documents/ece212_alex_maurice/lab8/sv/mips_decls_p.sv,1702667435,systemVerilog,C:/Users/otienom/Documents/ece212_alex_maurice/lab8/sv/aludec.sv;C:/Users/otienom/Documents/ece212_alex_maurice/lab8/sv/controller.sv;C:/Users/otienom/Documents/ece212_alex_maurice/lab8/sv/maindec.sv;C:/Users/otienom/Documents/ece212_alex_maurice/lab8/sv/mips.sv,C:/Users/otienom/Documents/ece212_alex_maurice/lab8/sv/aludec.sv,,mips_decls_p,,uvm,,,,,,
+C:/Users/otienom/Documents/ece212_alex_maurice/lab8/sv/mux2.sv,1702667435,systemVerilog,,C:/Users/otienom/Documents/ece212_alex_maurice/lab8/sv/mux3.sv,,mux2,,uvm,,,,,,
+C:/Users/otienom/Documents/ece212_alex_maurice/lab8/sv/mux3.sv,1702667435,systemVerilog,,C:/Users/otienom/Documents/ece212_alex_maurice/lab8/sv/regfile.sv,,mux3,,uvm,,,,,,
+C:/Users/otienom/Documents/ece212_alex_maurice/lab8/sv/regfile.sv,1702667435,systemVerilog,,C:/Users/otienom/Documents/ece212_alex_maurice/lab8/sv/signext.sv,,regfile,,uvm,,,,,,
+C:/Users/otienom/Documents/ece212_alex_maurice/lab8/sv/signext.sv,1702667435,systemVerilog,,C:/Users/otienom/Documents/ece212_alex_maurice/lab8/sv/signextzero.sv,,signext,,uvm,,,,,,
+C:/Users/otienom/Documents/ece212_alex_maurice/lab8/sv/signextzero.sv,1702668723,systemVerilog,,C:/Users/otienom/Documents/ece212_alex_maurice/lab8/sv/sl2.sv,,signextzero,,uvm,,,,,,
+C:/Users/otienom/Documents/ece212_alex_maurice/lab8/sv/sl2.sv,1702667435,systemVerilog,,C:/Users/otienom/Documents/ece212_alex_maurice/lab8/sv/top.sv,,sl2,,uvm,,,,,,
+C:/Users/otienom/Documents/ece212_alex_maurice/lab8/sv/testbench.sv,1702672997,systemVerilog,,,,testbench,,uvm,,,,,,
+C:/Users/otienom/Documents/ece212_alex_maurice/lab8/sv/top.sv,1702667435,systemVerilog,,C:/Users/otienom/Documents/ece212_alex_maurice/lab8/sv/testbench.sv,,top,,uvm,,,,,,

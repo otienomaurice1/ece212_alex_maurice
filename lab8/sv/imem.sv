@@ -31,7 +31,7 @@ module imem #(parameter SIZE=32) (
 
     initial
     begin
-        $readmemh("test2.dat",RAM); // initialize memory
+        $readmemh("test2_annotated_blank.dat",RAM); // initialize memory
     end
 
     always_comb
