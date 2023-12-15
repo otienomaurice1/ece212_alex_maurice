@@ -33,7 +33,8 @@ module mips(
 
     // control signals
 
-    logic        memtoreg, alusrc, regdst, regwrite, jump, pcsrc;
+    logic        memtoreg, regdst, regwrite, jump, pcsrc;
+    logic  [1:0] alusrc;
     logic [2:0]  alucontrol;
 
    controller U_C(.opcode, .funct, .zero,
