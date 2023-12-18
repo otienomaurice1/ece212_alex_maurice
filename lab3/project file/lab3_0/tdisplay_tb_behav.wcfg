@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="tdisplay_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="tdisplay_tb" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="120001fs"></ZoomEndTime>
+      <Cursor1Time time="120000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="158"></NameColumnWidth>
+      <ValueColumnWidth column_width="63"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="7" />
+   <wvobject fp_name="/tdisplay_tb/tc" type="array">
+      <obj_property name="ElementShortName">tc[12:0]</obj_property>
+      <obj_property name="ObjectShortName">tc[12:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tdisplay_tb/c_f" type="logic">
+      <obj_property name="ElementShortName">c_f</obj_property>
+      <obj_property name="ObjectShortName">c_f</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tdisplay_tb/sign" type="logic">
+      <obj_property name="ElementShortName">sign</obj_property>
+      <obj_property name="ObjectShortName">sign</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tdisplay_tb/ones" type="array">
+      <obj_property name="ElementShortName">ones[3:0]</obj_property>
+      <obj_property name="ObjectShortName">ones[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tdisplay_tb/tens" type="array">
+      <obj_property name="ElementShortName">tens[3:0]</obj_property>
+      <obj_property name="ObjectShortName">tens[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tdisplay_tb/hund" type="array">
+      <obj_property name="ElementShortName">hund[3:0]</obj_property>
+      <obj_property name="ObjectShortName">hund[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tdisplay_tb/thou" type="array">
+      <obj_property name="ElementShortName">thou[3:0]</obj_property>
+      <obj_property name="ObjectShortName">thou[3:0]</obj_property>
+   </wvobject>
+</wave_config>

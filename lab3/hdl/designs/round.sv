@@ -8,6 +8,6 @@ always_comb begin
 if (tx10_mag[3])
 	tx10_mag_r = tx10_mag[16:4] + '1;
 else 
-	tx10_mag_r = tx10_mag[16:4] + '1; 
+	tx10_mag_r = tx10_mag[16:4]; 
 end
 endmodule
