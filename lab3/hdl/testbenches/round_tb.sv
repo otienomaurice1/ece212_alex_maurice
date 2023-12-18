@@ -20,30 +20,18 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module tdisplay_tb;
-  logic signed [12:0] tc;
-  logic c_f;
-  logic sign;
-  logic [3:0] ones, tens, hund, thou;
+module round_tb;
+    logic [16:0] tx10_mag;
+    logic [12:0] tx10_mag_r;
     //duv
-    tdisplay DUV(.tc,.sign,.ones,.tens,.hund,.thou,.c_f);
+    round DUV(.tx10_mag,.tx10_mag_r);
     initial begin
-   c_f = 0;
-   tc = -13'd256; #10;
-   tc = -13'd156; #10;
-   tc = -13'd20; #10;
-   c_f = 1;
-   tc = -13'd256; #10;
-   tc = -13'd156; #10;
-   tc = -13'd20; #10;
-   c_f = 0;
-   tc = 13'd0; #10;
-   tc = 13'd156; #10;
-   tc = 13'd255; #10;
-   c_f = 1;
-   tc = 13'd0; #10;
-   tc = 13'd156; #10;
-   tc = 13'd255; #10;
+   tx10_mag = -17'd256; #10;
+   tx10_mag = -17'd156; #10;
+   tx10_mag = -17'd20; #10;
+   tx10_mag = 17'd0; #10;
+   tx10_mag = 17'd156; #10;
+   tx10_mag = 17'd255; #10;
    $stop;
    end
 endmodule

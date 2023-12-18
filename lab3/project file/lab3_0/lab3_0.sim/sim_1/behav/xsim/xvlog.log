@@ -1,0 +1,12 @@
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/otienom/Documents/ece212_alex_maurice/lab3/hdl/designs/conv_sgnmag.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module conv_sgnmag
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/otienom/Documents/ece212_alex_maurice/lab3/hdl/designs/dbl_dabble_ext.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dbl_dabble_ext
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/otienom/Documents/ece212_alex_maurice/lab3/hdl/designs/round.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module round
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/otienom/Documents/ece212_alex_maurice/lab3/hdl/designs/tconvert.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tconvert
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/otienom/Documents/ece212_alex_maurice/lab3/hdl/designs/tdisplay.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tdisplay
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/otienom/Documents/ece212_alex_maurice/lab3/hdl/testbenches/tdisplay_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tdisplay_tb

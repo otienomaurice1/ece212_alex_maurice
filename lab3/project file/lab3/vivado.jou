@@ -1,0 +1,58 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Mon Dec 18 10:45:34 2023
+# Process ID: 36832
+# Current directory: C:/Users/otienom/Documents/ece212_alex_maurice/lab3/project file/lab3
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent35800 C:\Users\otienom\Documents\ece212_alex_maurice\lab3\project file\lab3\lab3.xpr
+# Log file: C:/Users/otienom/Documents/ece212_alex_maurice/lab3/project file/lab3/vivado.log
+# Journal file: C:/Users/otienom/Documents/ece212_alex_maurice/lab3/project file/lab3\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/otienom/Documents/ece212_alex_maurice/lab3/project file/lab3/lab3.xpr}
+update_compile_order -fileset sources_1
+save_project_as lab3_0 {C:/Users/otienom/Documents/ece212_alex_maurice/lab3/project file/lab3_0} -force
+launch_simulation
+source tconvert.tcl
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top tconvert_tb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+launch_simulation
+close_sim
+launch_simulation
+source tconvert_tb.tcl
+close_sim
+launch_simulation
+source tconvert_tb.tcl
+close_sim
+launch_simulation
+source tconvert_tb.tcl
+close_sim
+launch_simulation
+source tconvert_tb.tcl
+close_sim
+launch_simulation
+source tconvert_tb.tcl
+close_sim
+launch_simulation
+source tconvert_tb.tcl
+relaunch_sim
+close_sim
+launch_simulation
+source tconvert_tb.tcl
+close_sim
+launch_simulation
+source tconvert_tb.tcl
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
