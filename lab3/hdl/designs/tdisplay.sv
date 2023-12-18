@@ -20,7 +20,7 @@ module tdisplay(
     input logic signed [12:0] tc,
     input logic c_f,
      output logic sign,
-    output logic  logic [3:0] ones, tens, hund, thou
+    output logic [3:0] ones, tens, hund, thou
     );
      
     logic signed [17:0] tx10_u; 

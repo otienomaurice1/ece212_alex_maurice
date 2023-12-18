@@ -18,20 +18,23 @@ module controller(
     input mips_decls_p::funct_t funct,
     input logic        zero,
     output logic       memtoreg, memwrite,
-    output logic       pcsrc, alusrc,
+    output logic       pcsrc,
     output logic       regdst, regwrite,
     output logic       jump,
+    output logic [1:0] alusrc,
     output logic [2:0] alucontrol
     );
-
+  
     logic [1:0] aluop;
-    logic       branch;
+    logic       branch,branchne;
+    logic       branchzero, branchnenotzero;
 
-    maindec U_MD(.opcode, .memtoreg, .memwrite, .branch,
+    maindec U_MD(.opcode, .memtoreg, .memwrite, .branch,.branchne,
                  .alusrc, .regdst, .regwrite, .jump, .aluop);
 
     aludec  U_AD(.funct, .aluop, .alucontrol);
-
-    assign pcsrc = branch & zero;
+    assign  branchzero = (branch & zero);
+    assign  branchnenotzero = branchne&(~zero);   
+    assign  pcsrc = branchzero | branchnenotzero;
 
 endmodule
